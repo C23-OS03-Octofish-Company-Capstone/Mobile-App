@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/dashboard_navigation"
+    app:startDestination="@id/homeFragment">
+
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="id.fishku.fishkuseller.dashboard.HomeFragment"
+        android:label="HomeFragment"
+        tools:layout="@layout/fragment_home">
+        <action
+            android:id="@+id/action_homeFragment_to_notificationActivity"
+            app:destination="@id/notificationActivity" />
+    </fragment>
+    <activity
+        android:id="@+id/notificationActivity"
+        android:name="id.fishku.fishkuseller.notification.NotificationActivity"
+        android:label="activity_notification"
+        tools:layout="@layout/activity_notification" />
+    <fragment
+        android:id="@+id/inventoryFragment"
+        android:name="id.fishku.fishkuseller.InventoryFragment"
+        android:label="fragment_inventory"
+        tools:layout="@layout/fragment_inventory" />
+
+</navigation>

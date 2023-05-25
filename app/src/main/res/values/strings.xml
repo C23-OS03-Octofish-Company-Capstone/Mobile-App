@@ -1,0 +1,36 @@
+<resources>
+    <string name="app_name">CapstoneFishkuSeller</string>
+    <string name="dashboard">Dashboard</string>
+    <string name="toko_ikan">Toko Ikan</string>
+    <string name="notification_icon">Notification Icon</string>
+    <string name="account_balance">Account Balance</string>
+    <string name="rp_balance">Rp {Balance}</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="to_profile">Ke Activity Profile Activity</string>
+    <string name="to_category">Ke fragment Category</string>
+    <string name="this_profile">Ini activity Profile</string>
+    <string name="this_category">Ini fragment Category</string>
+    <string name="category_lifestyle">Ke fragment Lifestyle</string>
+    <string name="category_sport">Ke fragment Sport</string>
+    <string name="category_name">Category Name</string>
+    <string name="category_description">Category Description</string>
+    <string name="to_home">Ke fragment Home</string>
+    <string name="today_s_income">Today\'s Income</string>
+    <string name="transaction_details">Transaction Details</string>
+    <string name="seller_photo">Seller Photo</string>
+    <string name="today_s_sales">Today\'s Sales</string>
+    <string name="stock">Inventory</string>
+    <string name="transaction">Transaction</string>
+    <string name="analytic">Analytic</string>
+    <string name="account">Account</string>
+    <string name="chat">Chat</string>
+    <string name="messaging">Messaging</string>
+    <string name="see_transaction">See your transaction details</string>
+    <string name="price_prediction">Fish Price Prediction</string>
+    <string name="actual_price">Actual Market Price</string>
+    <string name="predict_price">Predicted Price</string>
+    <string name="see_price_prediction">See price prediction details</string>
+
+
+</resources>
