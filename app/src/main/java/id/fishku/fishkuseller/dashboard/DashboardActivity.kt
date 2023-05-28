@@ -21,6 +21,8 @@ class DashboardActivity : AppCompatActivity() {
         dashBinding = ActivityDashboardBinding.inflate(layoutInflater)
         setContentView(dashBinding.root)
 
+
+
         supportActionBar?.hide()
 
         val navView: BottomNavigationView = dashBinding.dashboardNavView

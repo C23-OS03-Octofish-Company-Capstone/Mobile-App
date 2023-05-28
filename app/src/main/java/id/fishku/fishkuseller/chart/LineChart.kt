@@ -283,9 +283,9 @@ internal class LineChart : LinearLayout {
                 gesturePaint
             )
         }
-        if (gesturePos in 0 until xText.size) {
+        /**if (gesturePos in 0 until xText.size) {
             addBubble(canvas)
-        }
+        }*/
     }
 
     /**
@@ -335,7 +335,7 @@ internal class LineChart : LinearLayout {
 
     }
 
-    override fun dispatchTouchEvent(event: MotionEvent?): Boolean {
+    /**override fun dispatchTouchEvent(event: MotionEvent?): Boolean {
         when (event?.action) {
             MotionEvent.ACTION_DOWN -> {
                 Log.d("LineChart", "dispatchTouchEvent->ACTION_DOWN")
@@ -355,7 +355,7 @@ internal class LineChart : LinearLayout {
             }
         }
         return super.dispatchTouchEvent(event)
-    }
+    }*/
 
     override fun onTouchEvent(event: MotionEvent?): Boolean {
         return true

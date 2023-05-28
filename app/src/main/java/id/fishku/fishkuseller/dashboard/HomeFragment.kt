@@ -30,6 +30,9 @@ class HomeFragment : Fragment() {
         binding.btnNotification.setOnClickListener {
             view.findNavController().navigate(R.id.action_homeFragment_to_notificationActivity)
         }
+        binding.btnTransactionDetail.setOnClickListener{
+            view.findNavController().navigate(R.id.navigation_transaction)
+        }
     }
 
     private fun setupChart() {
