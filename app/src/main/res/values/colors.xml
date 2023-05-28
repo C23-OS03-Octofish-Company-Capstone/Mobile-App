@@ -10,4 +10,6 @@
     <color name="fishku_blue">#0C7DBF</color>
     <color name="profit">#379237</color>
     <color name="orange">#FF5722</color>
+    <color name="grey">#A7A7A7</color>
+    <color name="fishku_light">#E6EFF6</color>
 </resources>
