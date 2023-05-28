@@ -1,3 +1,5 @@
+@file:Suppress("DEPRECATION")
+
 package id.fishku.fishkuseller.dashboard
 
 import androidx.appcompat.app.AppCompatActivity
@@ -22,16 +24,15 @@ class DashboardActivity : AppCompatActivity() {
         supportActionBar?.hide()
 
         val navView: BottomNavigationView = dashBinding.dashboardNavView
-        val navController = findNavController(R.id.container)
-        val appBarConfiguration = AppBarConfiguration(
-            setOf(
-                R.id.navigation_dashboard,
+        val navController = findNavController(R.id.container_fragment)
+        val appBarConfiguration = AppBarConfiguration.Builder(
+                R.id.navigation_home,
                 R.id.navigation_inventory,
                 R.id.navigation_messaging,
                 R.id.navigation_transaction,
                 R.id.navigation_user
-            )
-        )
+        ).build()
+
         setupActionBarWithNavController(navController, appBarConfiguration)
         navView.setupWithNavController(navController)
 

@@ -31,6 +31,8 @@
     <string name="actual_price">Actual Market Price</string>
     <string name="predict_price">Predicted Price</string>
     <string name="see_price_prediction">See price prediction details</string>
+    <string name="notification_description">Notification Description</string>
+    <string name="order_received">Order Received - ID</string>
 
 
 </resources>

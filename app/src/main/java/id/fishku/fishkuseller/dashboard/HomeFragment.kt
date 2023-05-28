@@ -5,6 +5,8 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
+import androidx.navigation.findNavController
+import id.fishku.fishkuseller.R
 import id.fishku.fishkuseller.databinding.FragmentHomeBinding
 import java.util.*
 
@@ -25,6 +27,9 @@ class HomeFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
         setupChart()
+        binding.btnNotification.setOnClickListener {
+            view.findNavController().navigate(R.id.action_homeFragment_to_notificationActivity)
+        }
     }
 
     private fun setupChart() {
@@ -100,10 +105,5 @@ class HomeFragment : Fragment() {
             add(22F)
             add(27F)
         }
-    }
-
-    override fun onDestroy() {
-        super.onDestroy()
-        _binding = null
     }
 }
