@@ -1,13 +1,9 @@
-package id.fishku.fishkuseller.adapter
+package id.fishku.fishkuseller.notification.adapter
 
+import android.annotation.SuppressLint
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
-import com.bumptech.glide.Glide
-import com.bumptech.glide.load.DecodeFormat
-import com.bumptech.glide.load.resource.drawable.DrawableTransitionOptions
-import id.fishku.fishkuseller.api.ArticlesItem
-import id.fishku.fishkuseller.databinding.NotificationNewsItemBinding
 import id.fishku.fishkuseller.databinding.NotificationOrderItemBinding
 import id.fishku.fishkuseller.notification.NewsNotification
 
@@ -32,8 +28,9 @@ class NotificationOrderAdapter(/**private val listNewsNotification: List<Article
 
     override fun getItemCount(): Int = 8
 
+    @SuppressLint("SetTextI18n")
     override fun onBindViewHolder(holder: ListViewHolder, position: Int) {
-      holder.binding.tvOrderTitle.text = "Order ke-$position"
+      holder.binding.tvOrderTitle.text = "Order"
     }
 
 

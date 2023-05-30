@@ -9,8 +9,6 @@ import id.fishku.fishkuseller.R
 
 
 class UserFragment : Fragment() {
-
-
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?

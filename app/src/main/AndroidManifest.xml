@@ -17,7 +17,7 @@
             android:name=".register.RegisterActivity"
             android:exported="false" />
         <activity
-            android:name=".login.ActivityLogin"
+            android:name=".login.LoginActivity"
             android:exported="false" />
         <activity
             android:name=".notification.NotificationActivity"

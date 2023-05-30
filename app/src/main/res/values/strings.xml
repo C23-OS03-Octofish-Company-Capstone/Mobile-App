@@ -47,6 +47,22 @@
     <string name="create_account">Buat Akun</string>
     <string name="already_have_account">Sudah Punya Akun?</string>
     <string name="login_here">Masuk Disini</string>
+    <string name="fishku_partner">Fishku Partner</string>
+    <string name="last_message">Pesan Terakhir</string>
+    <string name="time">Time</string>
+    <string name="zero">0</string>
+    <string name="inventory">Inventori</string>
+    <string name="input_item_name">Masukkan Nama Barang</string>
+    <string name="edit_item">Edit Barang</string>
+    <string name="price">Harga</string>
+    <string name="title">Title</string>
+    <string name="delete_item">Delete item</string>
+    <string name="profile">Profile</string>
+    <string name="account_name">Nama akun</string>
+    <string name="phone">No Hp</string>
+    <string name="order">Pesanan</string>
+    <string name="shipping_status">Status Pengiriman</string>
+    <string name="check_status">Cek Status</string>
 
 
 </resources>

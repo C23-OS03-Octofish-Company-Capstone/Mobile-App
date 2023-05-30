@@ -7,8 +7,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
-import id.fishku.fishkuseller.adapter.NotificationNewsAdapter
-import id.fishku.fishkuseller.api.ArticlesItem
+import id.fishku.fishkuseller.notification.adapter.NotificationNewsAdapter
 import id.fishku.fishkuseller.databinding.FragmentNewsBinding
 
 class NewsFragment : Fragment() {
@@ -35,18 +34,14 @@ class NewsFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        notificationViewModel.setNewsData()
-
-        notificationViewModel.listNews.observe(viewLifecycleOwner){
-            showNotification(it)
-        }
+       showNotification()
 
     }
 
-    private fun showNotification(news : List<ArticlesItem>) {
+    private fun showNotification() {
         binding.apply {
             rvNotifNews.layoutManager = LinearLayoutManager(requireActivity())
-            rvNotifNews.adapter = NotificationNewsAdapter(news)
+            rvNotifNews.adapter = NotificationNewsAdapter()
         }
     }
 }

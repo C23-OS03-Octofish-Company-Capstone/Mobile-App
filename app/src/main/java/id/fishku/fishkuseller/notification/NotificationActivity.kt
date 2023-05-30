@@ -1,11 +1,10 @@
 package id.fishku.fishkuseller.notification
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import androidx.appcompat.app.AppCompatActivity
 import com.google.android.material.tabs.TabLayoutMediator
-import id.fishku.fishkuseller.R
-import id.fishku.fishkuseller.adapter.NotificationPagerAdapter
 import id.fishku.fishkuseller.databinding.ActivityNotificationBinding
+import id.fishku.fishkuseller.notification.adapter.NotificationPagerAdapter
 
 class NotificationActivity : AppCompatActivity() {
 

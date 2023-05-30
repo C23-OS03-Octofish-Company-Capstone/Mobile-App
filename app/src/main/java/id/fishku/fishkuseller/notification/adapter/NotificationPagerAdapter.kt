@@ -1,6 +1,5 @@
-package id.fishku.fishkuseller.adapter
+package id.fishku.fishkuseller.notification.adapter
 
-import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
 import androidx.viewpager2.adapter.FragmentStateAdapter
@@ -16,9 +15,9 @@ class NotificationPagerAdapter(activity: AppCompatActivity): FragmentStateAdapte
     override fun createFragment(position: Int): Fragment {
         val fragment =
             when(position){
-                0 -> NewsFragment()
-                1 -> OrderFragment()
-                else -> NewsFragment()
+                0 -> OrderFragment()
+                1 -> NewsFragment()
+                else -> OrderFragment()
             }
         return fragment
     }
