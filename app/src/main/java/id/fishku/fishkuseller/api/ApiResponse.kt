@@ -3,6 +3,11 @@ package id.fishku.fishkuseller.api
 import com.google.gson.annotations.SerializedName
 
 
+
+data class RegisterResponse(
+	@field:SerializedName("message")
+	val message: String
+)
 data class LoginResponse(
 
 	@field:SerializedName("data")

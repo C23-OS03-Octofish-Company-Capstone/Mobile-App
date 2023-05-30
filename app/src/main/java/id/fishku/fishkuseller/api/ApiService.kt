@@ -7,14 +7,18 @@ interface ApiService {
 
 
     @FormUrlEncoded
-    @POST("register")
+    @POST("seller/regist")
     fun postRegister(
+        @Field("name") name: String,
         @Field("email") email: String,
-        @Field("password") password: String
-    )
+        @Field("password") password: String,
+        @Field("phone_number") phoneNumber: Int,
+        @Field("location") location: String,
+        @Field("roles") roles: String
+    ): Call<RegisterResponse>
 
     @FormUrlEncoded
-    @POST("login")
+    @POST("seller/login")
     fun postLogin(
         @Field("email") email: String,
         @Field("password") password: String
