@@ -33,6 +33,20 @@
     <string name="see_price_prediction">See price prediction details</string>
     <string name="notification_description">Notification Description</string>
     <string name="order_received">Order Received - ID</string>
+    <string name="login">Masuk</string>
+    <string name="email">Email</string>
+    <string name="password">Kata Sandi</string>
+    <string name="login_account">Masuk Akun</string>
+    <string name="no_account">Tidak Punya Akun?</string>
+    <string name="register_here">Daftar Disini</string>
+    <string name="create_your_account">Buat Akun Kamu</string>
+    <string name="user_name">Nama Pengguna</string>
+    <string name="company_address">Alamat Usaha</string>
+    <string name="address">Alamat</string>
+    <string name="role">Peran</string>
+    <string name="create_account">Buat Akun</string>
+    <string name="already_have_account">Sudah Punya Akun?</string>
+    <string name="login_here">Masuk Disini</string>
 
 
 </resources>
