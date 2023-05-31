@@ -37,7 +37,7 @@ class EmailEditText : AppCompatEditText, View.OnFocusChangeListener {
     }
 
     private fun init() {
-        inputType = InputType.TYPE_CLASS_TEXT or InputType.TYPE_TEXT_VARIATION_EMAIL_ADDRESS
+        inputType = InputType.TYPE_TEXT_VARIATION_EMAIL_ADDRESS
         typeface = Typeface.DEFAULT
         onFocusChangeListener = this
         addTextChangedListener {
@@ -66,9 +66,9 @@ class EmailEditText : AppCompatEditText, View.OnFocusChangeListener {
     }
 
     private fun validateEmail() {
-        val emailPattern = "[a-zA-Z0-9._-]+@[a-z]+\\.+[a-z]+"
+        val emailPattern = Regex("[a-zA-Z0-9._-]+@[a-z]+\\.+[a-z]+")
         val email = text?.toString()?.trim()
-        if (email.isNullOrEmpty() || !email.matches(emailPattern.toRegex())) {
+        if (email.isNullOrEmpty() || !email.matches(emailPattern)) {
             showError()
         } else {
             error = null

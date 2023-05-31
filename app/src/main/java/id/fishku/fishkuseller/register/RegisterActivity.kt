@@ -1,5 +1,8 @@
+@file:Suppress("DEPRECATION")
+
 package id.fishku.fishkuseller.register
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
@@ -10,6 +13,7 @@ import android.widget.Toast
 import androidx.activity.viewModels
 import id.fishku.fishkuseller.R
 import id.fishku.fishkuseller.databinding.ActivityRegisterBinding
+import id.fishku.fishkuseller.login.LoginActivity
 
 class RegisterActivity : AppCompatActivity(){
 
@@ -30,6 +34,12 @@ class RegisterActivity : AppCompatActivity(){
         setContentView(regBinding.root)
 
         supportActionBar?.hide()
+
+        regBinding.btnToLogin.setOnClickListener {
+            val login = Intent(this@RegisterActivity, LoginActivity::class.java)
+            startActivity(login)
+            finish()
+        }
 
         val adapter = ArrayAdapter.createFromResource(this,
             R.array.spinner_items, android.R.layout.simple_spinner_item)
@@ -76,6 +86,18 @@ class RegisterActivity : AppCompatActivity(){
         }
         viewModel.registerResponse.observe(this){
             Toast.makeText(this@RegisterActivity, it, Toast.LENGTH_SHORT).show()
+            val backToLogin = Intent(this@RegisterActivity, LoginActivity::class.java)
+            startActivity(backToLogin)
+            finish()
         }
+    }
+
+    @Deprecated("Deprecated in Java")
+    override fun onBackPressed() {
+
+        val backToLogin = Intent(this@RegisterActivity, LoginActivity::class.java)
+        startActivity(backToLogin)
+        finish()
+
     }
 }

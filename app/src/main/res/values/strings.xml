@@ -69,6 +69,10 @@
     <string name="register_disclaimer">Dengan melanjutkan, Anda menyetujui Persyaratan Layanan kami dan Kebijakan Privasi.</string>
     <string name="phone_number">Nomer Telepon</string>
     <string name="phone_error_message">Nomer tidak valid</string>
+    <string name="seller_app">SELLER APP</string>
+    <string name="fishku">FI$HKU</string>
+    <string name="no_account_yet">Belum punya akun? Daftar di sini.</string>
+    <string name="logout">Logout</string>
 
     <string-array name="spinner_items">
         <item>Pilih Peran</item>
