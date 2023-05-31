@@ -33,6 +33,53 @@
     <string name="see_price_prediction">See price prediction details</string>
     <string name="notification_description">Notification Description</string>
     <string name="order_received">Order Received - ID</string>
+    <string name="login">Masuk</string>
+    <string name="email">Email</string>
+    <string name="password">Kata Sandi</string>
+    <string name="login_account">Masuk Akun</string>
+    <string name="no_account">Tidak Punya Akun?</string>
+    <string name="register_here">Daftar Disini</string>
+    <string name="create_your_account">Buat Akun Kamu</string>
+    <string name="user_name">Nama Pengguna</string>
+    <string name="company_address">Alamat Usaha</string>
+    <string name="address">Alamat</string>
+    <string name="role">Peran</string>
+    <string name="create_account">Buat Akun</string>
+    <string name="already_have_account">Sudah Punya Akun? Masuk di sini.</string>
+    <string name="login_here">Masuk Disini</string>
+    <string name="fishku_partner">Fishku Partner</string>
+    <string name="last_message">Pesan Terakhir</string>
+    <string name="time">Time</string>
+    <string name="zero">0</string>
+    <string name="inventory">Inventori</string>
+    <string name="input_item_name">Masukkan Nama Barang</string>
+    <string name="edit_item">Edit Barang</string>
+    <string name="price">Harga</string>
+    <string name="title">Title</string>
+    <string name="delete_item">Delete item</string>
+    <string name="profile">Profile</string>
+    <string name="account_name">Nama akun</string>
+    <string name="phone">No Hp</string>
+    <string name="order">Pesanan</string>
+    <string name="shipping_status">Status Pengiriman</string>
+    <string name="check_status">Cek Status</string>
+    <string name="email_error_message">Invalid email format</string>
+    <string name="password_error_message">Minimal 6 karakter</string>
+    <string name="name_empty">Tidak boleh kosong</string>
+    <string name="register_disclaimer">Dengan melanjutkan, Anda menyetujui Persyaratan Layanan kami dan Kebijakan Privasi.</string>
+    <string name="phone_number">Nomer Telepon</string>
+    <string name="phone_error_message">Nomer tidak valid</string>
+    <string name="seller_app">SELLER APP</string>
+    <string name="fishku">FI$HKU</string>
+    <string name="no_account_yet">Belum punya akun? Daftar di sini.</string>
+    <string name="logout">Logout</string>
+
+    <string-array name="spinner_items">
+        <item>Pilih Peran</item>
+        <item>Nelayan</item>
+        <item>Pembudidaya</item>
+        <item>Distributor</item>
+    </string-array>
 
 
 </resources>

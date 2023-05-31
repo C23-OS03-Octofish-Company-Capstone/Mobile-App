@@ -1,18 +1,9 @@
 package id.fishku.fishkuseller.notification
 
-import android.util.Log
-import androidx.lifecycle.LiveData
-import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
-import id.fishku.fishkuseller.api.ApiConfig
-import id.fishku.fishkuseller.api.ArticlesItem
-import id.fishku.fishkuseller.api.NewsResponse
-import retrofit2.Call
-import retrofit2.Callback
-import retrofit2.Response
 
 
-class NotificationViewModel: ViewModel() {
+class NotificationViewModel: ViewModel() /**{
 
     private val _listNews = MutableLiveData<List<ArticlesItem>>()
     val listNews : LiveData<List<ArticlesItem>> = _listNews
@@ -39,4 +30,4 @@ class NotificationViewModel: ViewModel() {
         })
     }
 
-}
+}**/

@@ -5,10 +5,10 @@
     android:layout_height="match_parent"
     tools:context=".dashboard.MessagingFragment">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_chat"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
-
+        tools:ignore="SpeakableTextPresentCheck"
+        tools:listitem="@layout/list_item_message" />
 </FrameLayout>

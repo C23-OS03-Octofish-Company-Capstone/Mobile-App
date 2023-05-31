@@ -1,16 +1,13 @@
 package id.fishku.fishkuseller.notification
 
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
-import id.fishku.fishkuseller.R
-import id.fishku.fishkuseller.adapter.NotificationNewsAdapter
-import id.fishku.fishkuseller.adapter.NotificationOrderAdapter
-import id.fishku.fishkuseller.databinding.FragmentNewsBinding
 import id.fishku.fishkuseller.databinding.FragmentOrderBinding
+import id.fishku.fishkuseller.notification.adapter.NotificationOrderAdapter
 
 
 class OrderFragment : Fragment() {
@@ -21,7 +18,7 @@ class OrderFragment : Fragment() {
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
+    ): View {
         _binding = FragmentOrderBinding.inflate(inflater, container, false)
         return binding.root
     }
