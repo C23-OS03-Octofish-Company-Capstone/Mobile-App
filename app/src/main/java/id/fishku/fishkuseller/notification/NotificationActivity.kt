@@ -20,8 +20,8 @@ class NotificationActivity : AppCompatActivity() {
             viewPager.adapter = pagerAdapter
             TabLayoutMediator(tabs, viewPager){tabs,position ->
                 when (position){
-                    0 -> tabs.text = "News"
-                    1 -> tabs.text = "Orders"
+                    0 -> tabs.text = "Orders"
+                    1 -> tabs.text = "News"
                 }
             }.attach()
         }

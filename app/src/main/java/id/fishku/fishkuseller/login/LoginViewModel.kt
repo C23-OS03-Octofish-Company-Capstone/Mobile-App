@@ -2,9 +2,7 @@ package id.fishku.fishkuseller.login
 
 import android.util.Log
 import androidx.lifecycle.*
-import id.fishku.fishkuseller.api.ApiConfig
-import id.fishku.fishkuseller.api.DataItem
-import id.fishku.fishkuseller.api.LoginResponse
+import id.fishku.fishkuseller.api.*
 import id.fishku.fishkuseller.datastore.LoginPref
 import id.fishku.fishkuseller.register.RegisterViewModel
 import kotlinx.coroutines.launch
@@ -22,6 +20,12 @@ class LoginViewModel(private val pref: LoginPref): ViewModel() {
 
     private val _loginResult = MutableLiveData<List<DataItem>>()
     val loginResult : LiveData<List<DataItem>> = _loginResult
+
+    private val _profileResponse = MutableLiveData<ProfileResponse>()
+    val profileResponse : LiveData<ProfileResponse> = _profileResponse
+
+    private val _profileResult = MutableLiveData<List<ProfileItem>>()
+    val profileResult : LiveData<List<ProfileItem>> = _profileResult
 
     companion object {
         private const val TAG = "LoginViewModel"
@@ -52,6 +56,34 @@ class LoginViewModel(private val pref: LoginPref): ViewModel() {
 
     }
 
+
+    fun getSellerData(it: Int) {
+        _isLoading.value = true
+        val client = ApiConfig.getApiService().getProfile(it)
+        client.enqueue(object : Callback<ProfileResponse>{
+            override fun onResponse(
+                call: Call<ProfileResponse>,
+                response: Response<ProfileResponse>
+            ) {
+                _isLoading.value = false
+                val responseBody = response.body()
+                if(response.isSuccessful && responseBody != null) {
+                    _profileResponse.value = response.body()
+                    _profileResult.value = response.body()?.data
+                }else{
+                    Log.e(TAG, "onFailure: ${response.code()} ${response.message()}")
+                    Log.e(TAG, "onFailure: ${response.errorBody()?.string()}")
+                }
+            }
+
+            override fun onFailure(call: Call<ProfileResponse>, t: Throwable) {
+                _isLoading.value = false
+                Log.e(TAG, "onFailure: ${t.message.toString()}")
+            }
+
+        })
+    }
+
     fun getSellerId(): LiveData<Int>{
         return pref.getSellerId().asLiveData()
     }
@@ -67,6 +99,8 @@ class LoginViewModel(private val pref: LoginPref): ViewModel() {
             pref.removeSellerId()
         }
     }
+
+
 
 }
 

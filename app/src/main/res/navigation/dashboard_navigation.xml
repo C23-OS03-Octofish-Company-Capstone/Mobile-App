@@ -13,6 +13,9 @@
         <action
             android:id="@+id/action_homeFragment_to_notificationActivity"
             app:destination="@id/navigation_notification" />
+        <action
+            android:id="@+id/action_navigation_home_to_navigation_transaction"
+            app:destination="@id/navigation_transaction" />
     </fragment>
     <activity
         android:id="@+id/navigation_notification"

@@ -24,5 +24,8 @@ interface ApiService {
         @Field("password") password: String
     ): Call<LoginResponse>
 
-
+    @GET("seller/profile/{sellerId}")
+    fun getProfile(
+        @Path("sellerId") sellerId: Int
+    ): Call<ProfileResponse>
 }
