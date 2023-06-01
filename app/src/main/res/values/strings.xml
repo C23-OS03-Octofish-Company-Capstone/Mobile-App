@@ -85,10 +85,12 @@
     <string name="btn_no">No</string>
     <string name="exit_app">Keluar Fishku</string>
     <string name="exit_validation">Anda akan keluar dari aplikasi. Lanjutkan?</string>
-    <string name="next_price">Prediksi harga bulan depan :</string>
-    <string name="exp_fish_price">Rp 23.000,-</string>
+    <string name="next_price">Prediksi harga bulan depan</string>
+    <string name="exp_fish_price">Rp 23.000,-/kg</string>
+    <string name="exp_fish_price2">Rp 25.000,-/kg</string>
     <string name="income_exp">Rp 132.000,-</string>
     <string name="sales_exp">6</string>
+    <string name="grosir">Grosir</string>
 
     <string-array name="spinner_items">
         <item>Pilih Peran</item>
