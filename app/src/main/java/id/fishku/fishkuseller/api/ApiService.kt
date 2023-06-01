@@ -12,7 +12,7 @@ interface ApiService {
         @Field("name") name: String,
         @Field("email") email: String,
         @Field("password") password: String,
-        @Field("phone_number") phoneNumber: Int,
+        @Field("phone_number") phoneNumber: Long,
         @Field("location") location: String,
         @Field("roles") roles: String
     ): Call<RegisterResponse>

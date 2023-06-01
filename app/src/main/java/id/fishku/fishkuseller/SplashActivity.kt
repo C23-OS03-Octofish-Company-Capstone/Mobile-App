@@ -3,9 +3,8 @@ package id.fishku.fishkuseller
 import android.annotation.SuppressLint
 import android.content.Context
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.os.Handler
+import androidx.appcompat.app.AppCompatActivity
 import androidx.datastore.core.DataStore
 import androidx.datastore.preferences.core.Preferences
 import androidx.datastore.preferences.preferencesDataStore
@@ -34,12 +33,17 @@ class SplashActivity : AppCompatActivity() {
         val pref = LoginPref.getInstance(dataStore)
         val loginViewModel = ViewModelProvider(this, ViewModelFactory(pref))[LoginViewModel::class.java]
 
-        loginViewModel.getSellerId().observe(this) {
-            isLogged = it != 0
-        }
-
         val dashboard = Intent(this@SplashActivity, DashboardActivity::class.java)
         val login = Intent(this@SplashActivity, LoginActivity::class.java)
+
+        loginViewModel.getSellerId().observe(this) {
+            isLogged = it != 0
+            if(isLogged){
+                dashboard.putExtra(DashboardActivity.SELLER_ID, it)
+            }
+        }
+
+
 
         splashBinding.imageView.alpha = 0f
         splashBinding.fisku.alpha = 0f

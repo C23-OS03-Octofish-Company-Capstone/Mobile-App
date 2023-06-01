@@ -3,16 +3,14 @@ package id.fishku.fishkuseller.dashboard
 import android.content.Context
 import android.content.Intent
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.datastore.core.DataStore
 import androidx.datastore.preferences.core.Preferences
 import androidx.datastore.preferences.preferencesDataStore
+import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
-import id.fishku.fishkuseller.R
-import id.fishku.fishkuseller.databinding.FragmentTransactionBinding
 import id.fishku.fishkuseller.databinding.FragmentUserBinding
 import id.fishku.fishkuseller.datastore.LoginPref
 import id.fishku.fishkuseller.login.LoginActivity
@@ -43,11 +41,16 @@ class UserFragment : Fragment() {
             btnLogout.setOnClickListener {
                 loginViewModel.removeSellerId()
                 val logout = Intent(requireActivity(), LoginActivity::class.java)
-                startActivity(logout)
-                requireActivity().finish()
-
+                logout.flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
+                requireActivity().startActivity(logout)
+                requireActivity().finishAffinity()
             }
         }
+    }
+
+    override fun onDestroyView() {
+        super.onDestroyView()
+        _binding = null
     }
 
 }

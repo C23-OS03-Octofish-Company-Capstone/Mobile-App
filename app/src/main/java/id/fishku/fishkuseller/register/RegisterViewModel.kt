@@ -22,7 +22,7 @@ class RegisterViewModel: ViewModel() {
         private const val TAG = "RegisterViewModel"
     }
 
-    fun postRegister(name: String, email: String, password: String, phone: Int, location: String, roles: String){
+    fun postRegister(name: String, email: String, password: String, phone: Long, location: String, roles: String){
         _isLoading.value = true
         val client = ApiConfig.getApiService().postRegister(name, email, password, phone, location, roles)
         client.enqueue(object : Callback<RegisterResponse>{

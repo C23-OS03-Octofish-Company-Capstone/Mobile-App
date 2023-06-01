@@ -76,6 +76,7 @@
 
             <TextView
                 android:id="@+id/lb_todays_income"
+                style="@style/FishkuText"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="16dp"
@@ -86,17 +87,19 @@
 
             <TextView
                 android:id="@+id/tv_todays_income"
+                style="@style/FishkuText"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="16dp"
                 android:layout_marginEnd="16dp"
-                android:text="@string/today_s_income"
+                android:text="@string/income_exp"
                 android:textColor="@color/profit"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/iv_seller_avatar" />
 
             <TextView
                 android:id="@+id/lb_todays_sales"
+                style="@style/FishkuText"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="16dp"
@@ -107,11 +110,12 @@
 
             <TextView
                 android:id="@+id/tv_todays_sales"
+                style="@style/FishkuText"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="16dp"
                 android:layout_marginEnd="16dp"
-                android:text="@string/today_s_sales"
+                android:text="@string/sales_exp"
                 android:textColor="@color/fishku_blue"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/lb_todays_income" />
@@ -141,6 +145,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    style="@style/FishkuText"
                     android:textColor="@color/fishku_blue"
                     android:text="@string/see_transaction" />
 
@@ -151,7 +156,6 @@
     </androidx.cardview.widget.CardView>
 
 
-
     <androidx.cardview.widget.CardView
         android:id="@+id/cardViewAnalytic"
         android:layout_width="match_parent"
@@ -159,8 +163,8 @@
         android:layout_marginStart="8dp"
         android:layout_marginTop="24dp"
         android:layout_marginEnd="8dp"
-        app:cardCornerRadius="5dp"
         android:elevation="10dp"
+        app:cardCornerRadius="5dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/cardViewIncome">
@@ -169,101 +173,101 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent">
 
+
             <TextView
                 android:id="@+id/lb_price_prediction"
-                android:layout_width="match_parent"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
                 android:layout_marginTop="16dp"
-                android:textSize="16sp"
-                android:textColor="@color/fishku_blue"
                 android:fontFamily="@font/poppins_semibold"
                 android:text="@string/price_prediction"
                 android:textAlignment="center"
-                app:layout_constraintEnd_toStartOf="@+id/lc_price_prediction"
+                android:textColor="@color/fishku_blue"
+                android:textSize="16sp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
-            <id.fishku.fishkuseller.chart.LineChart
-                android:id="@+id/lc_price_prediction"
-                android:layout_width="match_parent"
-                android:layout_height="231dp"
-                android:layout_marginTop="8dp"
-                android:background="#fff"
-                app:layout_constraintLeft_toLeftOf="parent"
-                app:layout_constraintRight_toRightOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/lb_price_prediction" />
-
-            <id.fishku.fishkuseller.chart.LineChart
-                android:id="@+id/lc_price_prediction1"
-                android:layout_width="match_parent"
-                android:layout_height="231dp"
-                android:layout_marginTop="8dp"
-                android:background="#00000000"
-                app:layout_constraintLeft_toLeftOf="parent"
-                app:layout_constraintRight_toRightOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/lb_price_prediction" />
-
-
-            <TextView
-                android:id="@+id/tv_lc_description"
-                android:layout_width="wrap_content"
+            <Spinner
+                android:id="@+id/spn_filter_harga"
+                android:layout_width="150dp"
                 android:layout_height="wrap_content"
-                android:layout_marginEnd="8dp"
-                android:drawablePadding="5dp"
-                android:text="@string/actual_price"
-                android:textSize="12sp"
-                app:drawableStartCompat="@drawable/shape_rect"
-                app:drawableTint="@color/fishku_blue"
-                app:layout_constraintEnd_toEndOf="@id/guideline"
-                app:layout_constraintTop_toBottomOf="@id/lc_price_prediction" />
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="16dp"
+                android:spinnerMode="dropdown"
+                android:contentDescription="@string/app_name"
+                android:background="@drawable/spinner_background"
+                android:minHeight="20dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:popupTheme="@style/SpinnerPopupTheme"/>
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="8dp"
-                android:drawablePadding="5dp"
-                android:text="@string/predict_price"
-                android:textSize="12sp"
-                app:drawableStartCompat="@drawable/shape_rect"
-                app:drawableTint="@color/orange"
-                app:layout_constraintStart_toEndOf="@id/guideline"
-                app:layout_constraintTop_toBottomOf="@id/lc_price_prediction" />
-
+            <ImageView
+                android:id="@+id/iv_price_fish_image"
+                android:layout_width="65dp"
+                android:layout_height="65dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="8dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/ikan_bandeng"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/lb_price_prediction"
+                tools:ignore="ContentDescription" />
 
             <androidx.constraintlayout.widget.Guideline
                 android:id="@+id/guideline"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
-                app:layout_constraintGuide_begin="197dp" />
+                app:layout_constraintGuide_end="198dp" />
+
+            <TextView
+                android:id="@+id/lb_next_price"
+                style="@style/FishkuText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="@string/next_price"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/iv_price_fish_image" />
+
+            <TextView
+                android:id="@+id/tv_next_price"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="@string/exp_fish_price"
+                android:textColor="@color/fishku_blue"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/lb_next_price" />
+
             <com.google.android.material.divider.MaterialDivider
                 android:id="@+id/divider_dashboard2"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="8dp"
-                app:layout_constraintTop_toBottomOf="@+id/tv_lc_description"
-                tools:layout_editor_absoluteX="16dp" />
+                app:layout_constraintTop_toBottomOf="@id/iv_price_fish_image" />
             <LinearLayout
                 android:id="@+id/btn_prediction_detail"
                 android:layout_width="match_parent"
                 android:layout_height="36dp"
-                android:gravity="center"
+                android:background="?android:attr/selectableItemBackground"
                 android:clickable="true"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/divider_dashboard2"
                 android:focusable="true"
-                android:background="?android:attr/selectableItemBackground">
+                android:gravity="center"
+                app:layout_constraintTop_toBottomOf="@+id/divider_dashboard2">
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:text="@string/see_price_prediction"
                     android:textColor="@color/fishku_blue"
-                    android:text="@string/see_price_prediction" />
+                    tools:layout_editor_absoluteX="126dp"
+                    tools:layout_editor_absoluteY="418dp" />
 
             </LinearLayout>
-
         </androidx.constraintlayout.widget.ConstraintLayout>
     </androidx.cardview.widget.CardView>
 

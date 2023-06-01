@@ -1,4 +1,4 @@
-<resources xmlns:tools="http://schemas.android.com/tools">
+<resources>
     <!-- Base application theme. -->
     <style name="Theme.CapstoneFishkuSeller" parent="Theme.MaterialComponents.DayNight.DarkActionBar">
         <!-- Primary brand color. -->
@@ -12,5 +12,22 @@
         <!-- Status bar color. -->
         <item name="android:statusBarColor">?attr/colorPrimaryVariant</item>
         <!-- Customize your theme here. -->
+    </style>
+
+    <style name="FishkuText">
+        <item name="android:fontFamily">@font/poppins_regular</item>
+        <item name="android:textColor">@color/dark_grey</item>
+    </style>
+
+    <style name="CustomAlertDialogStyle" parent="Theme.MaterialComponents.Light.Dialog.Alert">
+        <item name="colorPrimary">@color/fishku_blue</item>
+    </style>
+
+    <style name="SpinnerPopupTheme" parent="ThemeOverlay.AppCompat.Light">
+        <!-- Customize the appearance of the dropdown popup -->
+        <item name="android:popupBackground">@color/white</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textSize">16sp</item>
+        <!-- Add any other customizations as needed -->
     </style>
 </resources>

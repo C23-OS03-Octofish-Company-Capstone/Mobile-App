@@ -16,21 +16,21 @@
     <string name="category_name">Category Name</string>
     <string name="category_description">Category Description</string>
     <string name="to_home">Ke fragment Home</string>
-    <string name="today_s_income">Today\'s Income</string>
+    <string name="today_s_income">Pendapatan hari ini</string>
     <string name="transaction_details">Transaction Details</string>
     <string name="seller_photo">Seller Photo</string>
-    <string name="today_s_sales">Today\'s Sales</string>
+    <string name="today_s_sales">Penjualan hari ini</string>
     <string name="stock">Inventory</string>
     <string name="transaction">Transaction</string>
     <string name="analytic">Analytic</string>
     <string name="account">Account</string>
     <string name="chat">Chat</string>
     <string name="messaging">Messaging</string>
-    <string name="see_transaction">See your transaction details</string>
-    <string name="price_prediction">Fish Price Prediction</string>
+    <string name="see_transaction">Lihat detail transaksi</string>
+    <string name="price_prediction">Prediksi Harga Ikan</string>
     <string name="actual_price">Actual Market Price</string>
     <string name="predict_price">Predicted Price</string>
-    <string name="see_price_prediction">See price prediction details</string>
+    <string name="see_price_prediction">Lihat detail prediksi</string>
     <string name="notification_description">Notification Description</string>
     <string name="order_received">Order Received - ID</string>
     <string name="login">Masuk</string>
@@ -73,12 +73,36 @@
     <string name="fishku">FI$HKU</string>
     <string name="no_account_yet">Belum punya akun? Daftar di sini.</string>
     <string name="logout">Logout</string>
+    <string name="email_invalid" />
+    <string name="invalid_email">Email tidak valid.</string>
+    <string name="btn_ok">oke</string>
+    <string name="invalid_input">Input tidak valid</string>
+    <string name="register_success">Daftar Berhasil</string>
+    <string name="register_success_desc">Akun mu telah berhasil didaftarkan. Silahkan melakukan login.</string>
+    <string name="regis_cancel">Batal Daftar</string>
+    <string name="regis_cancel_desc">Apakah anda yakin ingin kembali? Input yang anda masukkan akan hilang.</string>
+    <string name="btn_yes">Yes</string>
+    <string name="btn_no">No</string>
+    <string name="exit_app">Keluar Fishku</string>
+    <string name="exit_validation">Anda akan keluar dari aplikasi. Lanjutkan?</string>
+    <string name="next_price">Prediksi harga bulan depan :</string>
+    <string name="exp_fish_price">Rp 23.000,-</string>
+    <string name="income_exp">Rp 132.000,-</string>
+    <string name="sales_exp">6</string>
 
     <string-array name="spinner_items">
         <item>Pilih Peran</item>
         <item>Nelayan</item>
         <item>Pembudidaya</item>
         <item>Distributor</item>
+    </string-array>
+
+    <string-array name="filter_harga_ikan">
+        <item>Gurame</item>
+        <item>Bandeng</item>
+        <item>Nila</item>
+        <item>Lele</item>
+        <item>Tongkol</item>
     </string-array>
 
 
