@@ -277,13 +277,13 @@
                 android:id="@+id/divider_dashboard2"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                app:layout_constraintBottom_toBottomOf="@+id/lb_eceran" />
+                android:layout_marginTop="8dp"
+                app:layout_constraintTop_toBottomOf="@+id/lb_eceran" />
 
             <LinearLayout
                 android:id="@+id/btn_prediction_detail"
                 android:layout_width="match_parent"
                 android:layout_height="36dp"
-                android:layout_marginTop="24dp"
                 android:background="?android:attr/selectableItemBackground"
                 android:clickable="true"
                 android:focusable="true"

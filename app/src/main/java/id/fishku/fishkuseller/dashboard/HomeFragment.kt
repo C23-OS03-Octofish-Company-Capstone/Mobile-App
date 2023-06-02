@@ -22,6 +22,14 @@ class HomeFragment : Fragment() {
     private val binding get() = _binding!!
 
     private lateinit var priceFilter : String
+    private lateinit var pBandeng: String
+    private lateinit var pGurame: String
+    private lateinit var pNila: String
+    private lateinit var pLele: String
+    private lateinit var pTongkol: String
+
+
+
     private var sellerId by Delegates.notNull<Int>()
     private val dashboardViewModel by viewModels<DashboardViewModel>()
 

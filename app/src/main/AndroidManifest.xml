@@ -14,8 +14,11 @@
         android:theme="@style/Theme.CapstoneFishkuSeller"
         tools:targetApi="31">
         <activity
+            android:name=".prediction.PriceActivity"
+            android:exported="false" />
+        <activity
             android:name=".register.RegisterActivity"
-            android:exported="true"/>
+            android:exported="true" />
         <activity
             android:name=".dashboard.DashboardActivity"
             android:exported="false" />
