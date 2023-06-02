@@ -91,6 +91,9 @@
     <string name="income_exp">Rp 132.000,-</string>
     <string name="sales_exp">6</string>
     <string name="grosir">Grosir</string>
+    <string name="eceran">Eceran</string>
+    <string name="harga_ikan">Harga Ikan</string>
+    <string name="jenis_ikan">Pilih Jenis Ikan</string>
 
     <string-array name="spinner_items">
         <item>Pilih Peran</item>
