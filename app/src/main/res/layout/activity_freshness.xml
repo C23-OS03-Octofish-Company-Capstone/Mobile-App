@@ -1,0 +1,633 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".FreshnessActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/textView33"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="@string/kesegaran_ikan"
+            android:textColor="@color/blue"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/textView36"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:text="@string/segar"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.045"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView33" />
+
+        <TextView
+            android:id="@+id/textView37"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:text="@string/tidak_segar"
+            app:layout_constraintBottom_toTopOf="@+id/card1"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.684"
+            app:layout_constraintStart_toEndOf="@+id/textView36"
+            app:layout_constraintTop_toBottomOf="@+id/textView33"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/card1"
+            android:layout_width="match_parent"
+            android:layout_height="270dp"
+            android:layout_marginTop="16dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView36">
+
+            <TextView
+                android:id="@+id/textView35"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="16dp"
+                android:text="Mata"
+                android:textColor="@color/fishku_blue"
+                android:textStyle="bold"/>
+
+            <ImageView
+                android:id="@+id/imageView4"
+                android:layout_width="163dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="40dp"
+                android:src="@drawable/s_mata_satu" />
+
+            <TextView
+                android:id="@+id/textView13"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="- Cerah"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="180dp"/>
+
+            <TextView
+                android:id="@+id/textView14"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="- Bening"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="200dp"/>
+
+            <TextView
+                android:id="@+id/textView15"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="- Cembung"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="220dp"/>
+
+            <TextView
+                android:id="@+id/textView16"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="- Menonjol"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="240dp"/>
+
+
+            <TextView
+                android:id="@+id/tv_matadua"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="235dp"
+                android:layout_marginTop="16dp"
+                android:text="Mata"
+                android:textColor="@color/fishku_blue"
+                android:textStyle="bold"/>
+
+            <ImageView
+                android:id="@+id/iv_matadua"
+                android:layout_width="163dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="235dp"
+                android:layout_marginTop="40dp"
+                android:src="@drawable/s_mata_dua" />
+
+            <TextView
+                android:id="@+id/tv_cdua1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="- Pudar"
+                android:layout_marginLeft="235dp"
+                android:layout_marginTop="180dp"/>
+
+            <TextView
+                android:id="@+id/tv_cdua2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="- Berkerut"
+                android:layout_marginLeft="235dp"
+                android:layout_marginTop="200dp"/>
+
+            <TextView
+                android:id="@+id/tv_cdua3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="- Cekung"
+                android:layout_marginLeft="235dp"
+                android:layout_marginTop="220dp"/>
+
+            <TextView
+                android:id="@+id/tv_cdua4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="- Tenggelam"
+                android:layout_marginLeft="235dp"
+                android:layout_marginTop="240dp"/>
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/card2"
+            android:layout_width="match_parent"
+            android:layout_height="270dp"
+            android:layout_marginTop="16dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/card1">
+
+            <TextView
+                android:id="@+id/tv_insang"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="16dp"
+                android:text="Insang"
+                android:textColor="@color/fishku_blue"
+                android:textStyle="bold"/>
+
+            <ImageView
+                android:id="@+id/iv_insang1"
+                android:layout_width="163dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="40dp"
+                android:src="@drawable/s_insang_satu" />
+
+            <TextView
+                android:id="@+id/tv_cisatu1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="- Merah"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="180dp"/>
+
+            <TextView
+                android:id="@+id/tv_cisatu2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="- Berbau Segar"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="200dp"/>
+
+            <TextView
+                android:id="@+id/tv_cisatu3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="- Tertutup Lendir Bening"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="220dp"/>
+
+
+            <TextView
+                android:id="@+id/tv_insangdua"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="235dp"
+                android:layout_marginTop="16dp"
+                android:text="Insang"
+                android:textColor="@color/fishku_blue"
+                android:textStyle="bold"/>
+
+            <ImageView
+                android:id="@+id/iv_insangdua"
+                android:layout_width="163dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="235dp"
+                android:layout_marginTop="40dp"
+                android:src="@drawable/s_insang_dua" />
+
+            <TextView
+                android:id="@+id/tv_cidua1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="- Coklat/Kelabu"
+                android:layout_marginLeft="235dp"
+                android:layout_marginTop="180dp"/>
+
+            <TextView
+                android:id="@+id/tv_cidua2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="- Berbau Adam"
+                android:layout_marginLeft="235dp"
+                android:layout_marginTop="200dp"/>
+
+            <TextView
+                android:id="@+id/tv_cidua3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="- Tertutup Lendir Keruh"
+                android:layout_marginLeft="235dp"
+                android:layout_marginTop="220dp"/>
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/card3"
+            android:layout_width="match_parent"
+            android:layout_height="270dp"
+            android:layout_marginTop="16dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/card2">
+
+            <TextView
+                android:id="@+id/tv_warna"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="16dp"
+                android:text="Warna"
+                android:textColor="@color/fishku_blue"
+                android:textStyle="bold"/>
+
+            <ImageView
+                android:id="@+id/iv_warna1"
+                android:layout_width="163dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="40dp"
+                android:src="@drawable/s_warna_satu" />
+
+            <TextView
+                android:id="@+id/tv_cwsatu1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="- Terang"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="180dp"/>
+
+            <TextView
+                android:id="@+id/tv_cwsatu2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="- Lendir Bening"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="200dp"/>
+
+            <TextView
+                android:id="@+id/tv_warnadua"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="235dp"
+                android:layout_marginTop="16dp"
+                android:text="Warna"
+                android:textColor="@color/fishku_blue"
+                android:textStyle="bold"/>
+
+            <ImageView
+                android:id="@+id/iv_warnadua"
+                android:layout_width="163dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="235dp"
+                android:layout_marginTop="40dp"
+                android:src="@drawable/s_warna_dua" />
+
+            <TextView
+                android:id="@+id/tv_cwdua1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="- Pudar"
+                android:layout_marginLeft="235dp"
+                android:layout_marginTop="180dp"/>
+
+            <TextView
+                android:id="@+id/tv_cwdua2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="- Lendir Kelabu"
+                android:layout_marginLeft="235dp"
+                android:layout_marginTop="200dp"/>
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/card4"
+            android:layout_width="match_parent"
+            android:layout_height="270dp"
+            android:layout_marginTop="16dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/card3">
+
+            <TextView
+                android:id="@+id/tv_bau"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="16dp"
+                android:text="Bau"
+                android:textColor="@color/fishku_blue"
+                android:textStyle="bold"/>
+
+            <ImageView
+                android:id="@+id/iv_bau1"
+                android:layout_width="163dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="40dp"
+                android:src="@drawable/s_bau_satu" />
+
+            <TextView
+                android:id="@+id/tv_cbsatu1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="- Segar Seperti Bau Laut"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="180dp"/>
+
+            <TextView
+                android:id="@+id/tv_baudua"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="235dp"
+                android:layout_marginTop="16dp"
+                android:text="Bau"
+                android:textColor="@color/fishku_blue"
+                android:textStyle="bold"/>
+
+            <ImageView
+                android:id="@+id/iv_baudua"
+                android:layout_width="163dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="235dp"
+                android:layout_marginTop="40dp"
+                android:src="@drawable/s_bau_dua" />
+
+            <TextView
+                android:id="@+id/tv_cbdua1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="- Asam"
+                android:layout_marginLeft="235dp"
+                android:layout_marginTop="180dp"/>
+
+            <TextView
+                android:id="@+id/tv_cbdua2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="- Bau Busuk"
+                android:layout_marginLeft="235dp"
+                android:layout_marginTop="200dp"/>
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/card5"
+            android:layout_width="match_parent"
+            android:layout_height="270dp"
+            android:layout_marginTop="16dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/card4">
+
+            <TextView
+                android:id="@+id/tv_daging"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="16dp"
+                android:text="Daging"
+                android:textColor="@color/fishku_blue"
+                android:textStyle="bold"/>
+
+            <ImageView
+                android:id="@+id/iv_daging1"
+                android:layout_width="163dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="40dp"
+                android:src="@drawable/s_daging_satu" />
+
+            <TextView
+                android:id="@+id/tv_cdsatu1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="- Warna Sesuai Jenis Ikan"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="180dp"/>
+
+            <TextView
+                android:id="@+id/tv_cdsatu2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="- Padat/Kenyal"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="200dp"/>
+
+            <TextView
+                android:id="@+id/tv_cdsatu3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="- Bila Ditekan Bekasnya Hilang"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="220dp"/>
+
+
+            <TextView
+                android:id="@+id/tv_dagingdua"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="235dp"
+                android:layout_marginTop="16dp"
+                android:text="Daging"
+                android:textColor="@color/fishku_blue"
+                android:textStyle="bold"/>
+
+            <ImageView
+                android:id="@+id/iv_dagingdua"
+                android:layout_width="163dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="235dp"
+                android:layout_marginTop="40dp"
+                android:src="@drawable/s_daging_dua" />
+
+            <TextView
+                android:id="@+id/tv_cddua1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="- Kemerahan"
+                android:layout_marginLeft="235dp"
+                android:layout_marginTop="180dp"/>
+
+            <TextView
+                android:id="@+id/tv_cddua2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="- Bila Ditekan Bekasnya Tidak Hilang"
+                android:layout_marginLeft="235dp"
+                android:layout_marginTop="200dp"/>
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/card6"
+            android:layout_width="match_parent"
+            android:layout_height="270dp"
+            android:layout_marginTop="16dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/card5">
+
+            <TextView
+                android:id="@+id/tv_sisik"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="16dp"
+                android:text="Sisik"
+                android:textColor="@color/fishku_blue"
+                android:textStyle="bold"/>
+
+            <ImageView
+                android:id="@+id/iv_sisik1"
+                android:layout_width="163dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="40dp"
+                android:src="@drawable/s_sisik_satu" />
+
+            <TextView
+                android:id="@+id/tv_cssatu1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="- Menempel kuat"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="180dp"/>
+
+            <TextView
+                android:id="@+id/tv_sisikdua"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="235dp"
+                android:layout_marginTop="16dp"
+                android:text="Sisik"
+                android:textColor="@color/fishku_blue"
+                android:textStyle="bold"/>
+
+            <ImageView
+                android:id="@+id/iv_sisikdua"
+                android:layout_width="163dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="235dp"
+                android:layout_marginTop="40dp"
+                android:src="@drawable/s_sisik_dua" />
+
+            <TextView
+                android:id="@+id/tv_csdua1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="- Mudah Lepas"
+                android:layout_marginLeft="235dp"
+                android:layout_marginTop="180dp"/>
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/card7"
+            android:layout_width="match_parent"
+            android:layout_height="270dp"
+            android:layout_marginTop="16dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/card6">
+
+            <TextView
+                android:id="@+id/tv_dinding"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="16dp"
+                android:text="Dinding"
+                android:textColor="@color/fishku_blue"
+                android:textStyle="bold"/>
+
+            <ImageView
+                android:id="@+id/iv_dinding1"
+                android:layout_width="163dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="40dp"
+                android:src="@drawable/s_dinding_satu" />
+
+            <TextView
+                android:id="@+id/tv_cdnsatu1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="- Utuh"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="180dp"/>
+
+            <TextView
+                android:id="@+id/tv_cdnsatu2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="- Elastis"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="200dp"/>
+
+            <TextView
+                android:id="@+id/tv_dindingdua"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="235dp"
+                android:layout_marginTop="16dp"
+                android:text="Dinding"
+                android:textColor="@color/fishku_blue"
+                android:textStyle="bold"/>
+
+            <ImageView
+                android:id="@+id/iv_dindingdua"
+                android:layout_width="163dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="235dp"
+                android:layout_marginTop="40dp"
+                android:src="@drawable/s_dinding_dua" />
+
+            <TextView
+                android:id="@+id/tv_cdndua1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="- Pecah"
+                android:layout_marginLeft="235dp"
+                android:layout_marginTop="180dp"/>
+
+            <TextView
+                android:id="@+id/tv_cdndua2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="- Lembek"
+                android:layout_marginLeft="235dp"
+                android:layout_marginTop="200dp"/>
+
+        </androidx.cardview.widget.CardView>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>
