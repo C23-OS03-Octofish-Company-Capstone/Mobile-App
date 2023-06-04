@@ -114,6 +114,7 @@
     <string name="pengemasan_ikanhidup6">6. Tutup dan rekatkan styrofoam, kemudian masukkan ke dalam dus.</string>
     <string name="pengemasan_ikanhidup7">7. Rekatkan dus dan beri label sebagai "Ikan Hidup - Fragile."</string>
     <string name="pengemasan_ikanhidup8">8. Pilih layanan pengiriman yang sesuai. Pilihlah pengiriman dengan penanganan khusus dan tercepat.</string>
+    <string name="history_message">Pesanan telah diterima oleh yang bersangkutan</string>
 
     <string-array name="spinner_items">
         <item>Pilih Peran</item>
