@@ -50,11 +50,11 @@ class LoginViewModel(private val pref: LoginPref): ViewModel() {
 
     }
 
-    fun getSellerId(): LiveData<Int>{
+    fun getSellerId(): LiveData<Long> {
         return pref.getSellerId().asLiveData()
     }
 
-    fun saveSellerId(sellerId: Int){
+    fun saveSellerId(sellerId: Long){
         viewModelScope.launch {
             pref.saveSellerId(sellerId)
         }

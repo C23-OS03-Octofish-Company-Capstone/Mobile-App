@@ -94,6 +94,16 @@
     <string name="eceran">Eceran</string>
     <string name="harga_ikan">Harga Ikan</string>
     <string name="jenis_ikan">Pilih Jenis Ikan</string>
+    <string name="add_item">Tambah Barang</string>
+    <string name="tips">Foto berkualitas tinggi biasanya jadi lebih populer. Jenis foto yang diterima JPG, PNG.</string>
+    <string name="edit_photo">Ubah Foto</string>
+    <string name="item_name">Nama Ikan</string>
+    <string name="item_price">Harga Ikan</string>
+    <string name="item_weight">Berat Ikan</string>
+    <string name="item_desc">Catatan</string>
+    <string name="save_change">Simpan</string>
+    <string name="add">Tambah</string>
+    <string name="change_data">Ubah</string>
 
     <string-array name="spinner_items">
         <item>Pilih Peran</item>

@@ -26,6 +26,43 @@ interface ApiService {
 
     @GET("seller/profile/{sellerId}")
     fun getProfile(
-        @Path("sellerId") sellerId: Int
+        @Path("sellerId") sellerId: Long
     ): Call<ProfileResponse>
+
+    @GET("seller/ikan/{sellerId}")
+    fun getInventory(
+        @Path("sellerId") sellerId: Long
+    ): Call<InventoryResponse>
+
+    @FormUrlEncoded
+    @POST("seller/ikan/input")
+    fun postFish(
+        @Field("id_seller") sellerId: Long,
+        @Field("name") name: String,
+        @Field("weight") weight: Long,
+        @Field("description") description: String,
+        @Field("price") price: Long,
+        @Field("photo_url") photoUrl: String
+    ): Call<RegisterResponse>
+
+    @FormUrlEncoded
+    @PUT("seller/ikan/edit/{idFish}")
+    fun postEditFish(
+        @Path("idFish") idFish: Long,
+        @Field("name") name: String,
+        @Field("weight") weight: Long,
+        @Field("description") description: String,
+        @Field("price") price: Long,
+    ): Call<RegisterResponse>
+
+    @DELETE("seller/ikan/delete/{idFish}")
+    fun deleteFish(
+        @Path("idFish") idFish: Long,
+    ): Call<RegisterResponse>
+
+    @GET("seller/ikan/{sellerId}/{name}")
+    fun searchInventory(
+        @Path("sellerId") sellerId: Long,
+        @Path("name") name: String,
+    ): Call<InventoryResponse>
 }

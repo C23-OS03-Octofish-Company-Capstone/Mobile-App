@@ -42,7 +42,7 @@ data class DataItem(
 	val namaPemilikRekening: Any,
 
 	@field:SerializedName("id")
-	val id: Int,
+	val id: Long,
 
 	@field:SerializedName("nama_bank")
 	val namaBank: Any,
@@ -57,7 +57,7 @@ data class DataItem(
 data class ProfileResponse(
 
 	@field:SerializedName("banyak")
-	val banyak: Int,
+	val banyak: Long,
 
 	@field:SerializedName("data")
 	val data: List<ProfileItem>
@@ -79,4 +79,31 @@ data class ProfileItem(
 
 	@field:SerializedName("photo_url")
 	val photoUrl: Any
+)
+
+data class InventoryResponse(
+
+	@field:SerializedName("banyak")
+	val banyak: Long,
+
+	@field:SerializedName("data")
+	val data: List<InventoryItem>
+)
+
+data class InventoryItem(
+
+	@field:SerializedName("id_fish")
+	val idFish: Long,
+
+	@field:SerializedName("price")
+	val price: Long,
+
+	@field:SerializedName("name")
+	val name: String,
+
+	@field:SerializedName("weight")
+	val weight: Long,
+
+	@field:SerializedName("photo_url")
+	val photoUrl: String
 )

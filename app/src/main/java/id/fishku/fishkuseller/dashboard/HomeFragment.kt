@@ -12,7 +12,6 @@ import androidx.fragment.app.viewModels
 import androidx.navigation.findNavController
 import id.fishku.fishkuseller.R
 import id.fishku.fishkuseller.api.ProfileItem
-import id.fishku.fishkuseller.dashboard.adapter.DashboardViewModel
 import id.fishku.fishkuseller.databinding.FragmentHomeBinding
 import kotlin.properties.Delegates
 
@@ -30,7 +29,7 @@ class HomeFragment : Fragment() {
 
 
 
-    private var sellerId by Delegates.notNull<Int>()
+    private var sellerId by Delegates.notNull<Long>()
     private val dashboardViewModel by viewModels<DashboardViewModel>()
 
     override fun onCreateView(
@@ -44,7 +43,7 @@ class HomeFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        sellerId = requireActivity().intent.getIntExtra(DashboardActivity.SELLER_ID, 0)
+        sellerId = requireActivity().intent.getLongExtra(DashboardActivity.SELLER_ID, -1L)
 
         dashboardViewModel.getSellerData(sellerId)
 
@@ -98,10 +97,4 @@ class HomeFragment : Fragment() {
     }
 
 
-
-
-    override fun onDestroyView() {
-        super.onDestroyView()
-        _binding = null
-    }
 }

@@ -7,7 +7,7 @@ import kotlinx.coroutines.flow.map
 
 class LoginPref private constructor(private val dataStore: DataStore<Preferences>){
 
-    private val SELLER_ID = intPreferencesKey("seller_id")
+    private val SELLER_ID = longPreferencesKey("seller_id")
 
     companion object {
         @Volatile
@@ -22,13 +22,13 @@ class LoginPref private constructor(private val dataStore: DataStore<Preferences
         }
     }
 
-    fun getSellerId(): Flow<Int> {
+    fun getSellerId(): Flow<Long> {
         return dataStore.data.map { preferences ->
             preferences[SELLER_ID] ?: 0
         }
     }
 
-    suspend fun saveSellerId(sellerId: Int){
+    suspend fun saveSellerId(sellerId: Long){
         dataStore.edit { preferences ->
             preferences[SELLER_ID] = sellerId
         }
