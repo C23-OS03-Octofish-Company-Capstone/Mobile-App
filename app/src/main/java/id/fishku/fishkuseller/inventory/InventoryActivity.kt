@@ -1,14 +1,17 @@
 package id.fishku.fishkuseller.inventory
 
+import android.app.AlertDialog
 import android.os.Bundle
 import android.widget.Toast
 import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
+import androidx.appcompat.view.ContextThemeWrapper
 import com.bumptech.glide.Glide
 import com.bumptech.glide.load.DecodeFormat
 import com.bumptech.glide.load.resource.drawable.DrawableTransitionOptions
 import id.fishku.fishkuseller.R
 import id.fishku.fishkuseller.dashboard.DashboardActivity
+import id.fishku.fishkuseller.dashboard.DashboardViewModel
 import id.fishku.fishkuseller.databinding.ActivityInventoryBinding
 import kotlin.properties.Delegates
 
@@ -23,6 +26,7 @@ class InventoryActivity : AppCompatActivity() {
     private var sellerId by Delegates.notNull<Long>()
     private var isEditing: Boolean = false
     private val inventoryViewModel by viewModels<InventoryViewModel>()
+    private val dashboardViewModel by viewModels<DashboardViewModel>()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -56,15 +60,34 @@ class InventoryActivity : AppCompatActivity() {
             invBinding.apply {
                 fName = etName.text.toString().trim()
                 val stringPrice = etPrice.text.toString().trim()
-                fPrice = stringPrice.toLong()
+                if(stringPrice.isNotEmpty()) {
+                    fPrice = stringPrice.toLong()
+                }
                 val stringWeight = etWeight.text.toString().trim()
-                fWeight = stringWeight.toLong()
+                if (stringWeight.isNotEmpty()) {
+                    fWeight = stringWeight.toLong()
+                }
                 fPhoto = "https://images.solopos.com/2021/11/lele-jumbo.jpg"
 
-                if (isEditing){
-                    inventoryViewModel.postEditFish(fishId, fName, fPrice, fWeight, fName)
-                }else {
-                    inventoryViewModel.postFish(sellerId, fName, fPrice, fWeight, fName, fPhoto)
+                val isValid = fName.isNotEmpty() && stringPrice.isNotEmpty() && stringWeight.isNotEmpty()
+                if(isValid) {
+                    if (isEditing) {
+                        inventoryViewModel.postEditFish(fishId, fName, fPrice, fWeight, fName)
+
+                    } else {
+                        inventoryViewModel.postFish(sellerId, fName, fPrice, fWeight, fName, fPhoto)
+
+                    }
+                    dashboardViewModel.getInventory(sellerId)
+                    finish()
+                }else{
+                    AlertDialog.Builder(ContextThemeWrapper(this@InventoryActivity, R.style.CustomAlertDialogStyle))
+                        .setTitle("Error")
+                        .setMessage(R.string.input_empty)
+                        .setPositiveButton(R.string.btn_ok) { dialog, _ ->
+                            dialog.dismiss()
+                        }
+                        .show()
                 }
             }
         }

@@ -104,6 +104,7 @@
     <string name="save_change">Simpan</string>
     <string name="add">Tambah</string>
     <string name="change_data">Ubah</string>
+    <string name="input_empty">Semua data harus diisi.</string>
 
     <string-array name="spinner_items">
         <item>Pilih Peran</item>
