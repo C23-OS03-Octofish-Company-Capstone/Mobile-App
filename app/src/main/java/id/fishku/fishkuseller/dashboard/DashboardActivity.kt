@@ -27,6 +27,7 @@ class DashboardActivity : AppCompatActivity() {
 
     companion object{
         const val SELLER_ID = "seller_id"
+        const val ALL_ORDER = "all_order"
     }
 
     override fun onCreate(savedInstanceState: Bundle?) {

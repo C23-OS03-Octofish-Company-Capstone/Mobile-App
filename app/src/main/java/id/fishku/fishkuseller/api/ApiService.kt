@@ -28,4 +28,9 @@ interface ApiService {
     fun getProfile(
         @Path("sellerId") sellerId: Int
     ): Call<ProfileResponse>
+
+    @GET("seller/pesanan/{idSeller}")
+    fun getAllOrders(
+        @Path("idSeller") idSeller: Long
+    ): Call<OrderResponse>
 }

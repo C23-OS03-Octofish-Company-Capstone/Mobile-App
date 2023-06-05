@@ -10,7 +10,9 @@ import android.widget.ArrayAdapter
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import androidx.navigation.findNavController
+import androidx.recyclerview.widget.LinearLayoutManager
 import id.fishku.fishkuseller.R
+import id.fishku.fishkuseller.api.OrderItem
 import id.fishku.fishkuseller.api.ProfileItem
 import id.fishku.fishkuseller.dashboard.adapter.DashboardViewModel
 import id.fishku.fishkuseller.databinding.FragmentHomeBinding
@@ -96,6 +98,8 @@ class HomeFragment : Fragment() {
     private fun setData(it: List<ProfileItem>) {
         binding.tvSellerName.text = it[0].name
     }
+
+
 
 
 

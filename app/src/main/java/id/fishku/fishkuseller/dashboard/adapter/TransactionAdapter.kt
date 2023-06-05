@@ -4,10 +4,11 @@ import android.annotation.SuppressLint
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
+import id.fishku.fishkuseller.api.OrderItem
 import id.fishku.fishkuseller.databinding.ListItemTransactionBinding
 import id.fishku.fishkuseller.notification.NewsNotification
 
-class TransactionAdapter(/**private val listNewsNotification: List<ArticlesItem>*/) : RecyclerView.Adapter<TransactionAdapter.ListViewHolder>() {
+class TransactionAdapter(private val listOrderItem: List<OrderItem>) : RecyclerView.Adapter<TransactionAdapter.ListViewHolder>() {
 
     private lateinit var onItemClickCallback: OnItemClickCallback
 
