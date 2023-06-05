@@ -16,6 +16,9 @@
         <action
             android:id="@+id/action_navigation_home_to_navigation_transaction"
             app:destination="@id/navigation_transaction" />
+        <action
+            android:id="@+id/action_navigation_home_to_priceActivity"
+            app:destination="@id/priceActivity" />
     </fragment>
     <activity
         android:id="@+id/navigation_notification"
@@ -42,5 +45,10 @@
         android:name="id.fishku.fishkuseller.dashboard.UserFragment"
         android:label="fragment_user"
         tools:layout="@layout/fragment_user" />
+    <activity
+        android:id="@+id/priceActivity"
+        android:name="id.fishku.fishkuseller.prediction.PriceActivity"
+        android:label="activity_price"
+        tools:layout="@layout/activity_price" />
 
 </navigation>

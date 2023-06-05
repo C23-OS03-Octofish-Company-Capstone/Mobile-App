@@ -55,6 +55,10 @@ class HomeFragment : Fragment() {
             view.findNavController().navigate(R.id.action_homeFragment_to_notificationActivity)
         }
 
+        binding.btnPredictionDetail.setOnClickListener {
+            view.findNavController().navigate(R.id.action_navigation_home_to_priceActivity)
+        }
+
         val adapter = ArrayAdapter.createFromResource(requireContext(),
             R.array.filter_harga_ikan, R.layout.dropdown_item)
 

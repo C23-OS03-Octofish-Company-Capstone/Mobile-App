@@ -52,7 +52,8 @@ class InventoryAdapter(private val listInventory: List<InventoryItem>) : Recycle
         holder.binding.tvFishName.text = listInventory[position].name
         val price = listInventory[position].price.toDouble()
         val formattedPrice = formatPrice(price)
-        val priceText = "Rp. $formattedPrice/kg"
+        val weight = listInventory[position].weight
+        val priceText = "Rp. $formattedPrice/ $weight kg"
         holder.binding.tvFishPrice.text = priceText
 
         holder.binding.btnEdit.setOnClickListener {

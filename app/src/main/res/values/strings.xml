@@ -57,7 +57,7 @@
     <string name="price">Harga</string>
     <string name="title">Title</string>
     <string name="delete_item">Delete item</string>
-    <string name="profile">Profile</string>
+    <string name="profile">Profil</string>
     <string name="account_name">Nama akun</string>
     <string name="phone">No Hp</string>
     <string name="order">Pesanan</string>
@@ -98,13 +98,16 @@
     <string name="tips">Foto berkualitas tinggi biasanya jadi lebih populer. Jenis foto yang diterima JPG, PNG.</string>
     <string name="edit_photo">Ubah Foto</string>
     <string name="item_name">Nama Ikan</string>
-    <string name="item_price">Harga Ikan</string>
-    <string name="item_weight">Berat Ikan</string>
+    <string name="item_price">Harga Ikan (Rp)</string>
+    <string name="item_weight">Berat Ikan (kg)</string>
     <string name="item_desc">Catatan</string>
     <string name="save_change">Simpan</string>
     <string name="add">Tambah</string>
     <string name="change_data">Ubah</string>
     <string name="input_empty">Semua data harus diisi.</string>
+    <string name="customer_support">Bantuan Pengguna</string>
+    <string name="log_out">Keluar dari akun</string>
+    <string name="edit_profile">Ubah Profil</string>
 
     <string-array name="spinner_items">
         <item>Pilih Peran</item>
