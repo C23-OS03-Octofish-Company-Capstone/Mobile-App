@@ -1,7 +1,7 @@
 package id.fishku.fishkuseller.api
 
 import com.google.gson.annotations.SerializedName
-
+import java.util.*
 
 
 data class RegisterResponse(
@@ -122,9 +122,6 @@ data class OrderItem(
 
 	@field:SerializedName("date")
 	val date: Date,
-
-	@field:SerializedName("notes")
-	val notes: String,
 
 	@field:SerializedName("status")
 	val status: String,

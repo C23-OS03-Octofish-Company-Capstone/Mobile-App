@@ -8,7 +8,6 @@ import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import androidx.recyclerview.widget.LinearLayoutManager
 import id.fishku.fishkuseller.api.OrderItem
-import id.fishku.fishkuseller.dashboard.adapter.DashboardViewModel
 import id.fishku.fishkuseller.dashboard.adapter.TransactionAdapter
 import id.fishku.fishkuseller.databinding.FragmentTransactionBinding
 import kotlin.properties.Delegates
