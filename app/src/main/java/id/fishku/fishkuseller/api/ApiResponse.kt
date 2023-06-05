@@ -107,3 +107,31 @@ data class InventoryItem(
 	@field:SerializedName("photo_url")
 	val photoUrl: String
 )
+
+data class OrderResponse(
+	@field:SerializedName("banyak")
+	val banyak: Int,
+
+	@field:SerializedName("data")
+	val data: List<OrderItem>
+)
+
+data class OrderItem(
+	@field:SerializedName("id_order")
+	val idOrder: Int,
+
+	@field:SerializedName("date")
+	val date: Date,
+
+	@field:SerializedName("notes")
+	val notes: String,
+
+	@field:SerializedName("status")
+	val status: String,
+
+	@field:SerializedName("total_price")
+	val totalPrice: String,
+
+	@field:SerializedName("photo_url")
+	val photoUrl: Any
+)

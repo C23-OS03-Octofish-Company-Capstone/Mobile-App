@@ -17,6 +17,18 @@
             android:name=".inventory.InventoryActivity"
             android:exported="false" />
         <activity
+            android:name=".FreshnessActivity"
+            android:exported="false" />
+        <activity
+            android:name=".InfoOpsiActivity"
+            android:exported="false" />
+        <activity
+            android:name=".TransactionHistoryActivity"
+            android:exported="false" />
+        <activity
+            android:name=".PackingActivity"
+            android:exported="false" />
+        <activity
             android:name=".prediction.PriceActivity"
             android:exported="false" />
         <activity

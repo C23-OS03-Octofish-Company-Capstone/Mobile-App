@@ -29,6 +29,11 @@ interface ApiService {
         @Path("sellerId") sellerId: Long
     ): Call<ProfileResponse>
 
+    @GET("seller/pesanan/{idSeller}")
+    fun getAllOrders(
+        @Path("idSeller") idSeller: Long
+    ): Call<OrderResponse>
+
     @GET("seller/ikan/{sellerId}")
     fun getInventory(
         @Path("sellerId") sellerId: Long

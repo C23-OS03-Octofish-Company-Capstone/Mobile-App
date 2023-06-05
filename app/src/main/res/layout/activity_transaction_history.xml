@@ -4,39 +4,37 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".dashboard.TransactionFragment">
+    tools:context=".TransactionHistoryActivity">
 
 
     <TextView
-        android:id="@+id/textView22"
+        android:id="@+id/textView29"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/order"
+        android:text="Pesanan Selesai"
         android:textColor="@color/blue"
         android:textSize="32sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.05" />
+        app:layout_constraintVertical_bias="0.051" />
 
     <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/guideline8"
+        android:id="@+id/guideline9"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
         app:layout_constraintGuide_begin="90dp" />
 
     <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/rv_transaction"
+        android:id="@+id/rv_transactionhistory"
         android:layout_width="0dp"
         android:layout_height="0dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/guideline8"
-        tools:listitem="@layout/list_item_transaction"/>
-
+        app:layout_constraintTop_toTopOf="@+id/guideline9"
+        tools:listitem="@layout/list_item_transaction_history"/>
 </androidx.constraintlayout.widget.ConstraintLayout>
