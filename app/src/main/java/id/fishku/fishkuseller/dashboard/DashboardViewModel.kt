@@ -41,7 +41,7 @@ class DashboardViewModel: ViewModel() {
                 _isLoading.value = false
                 val responseBody = response.body()
                 if(response.isSuccessful && responseBody != null) {
-                    _sellerProfile.value = response.body()?.data
+                    _sellerProfile.value = response.body()?.data?.result
                 }else{
                     Log.e(TAG, "onFailure: ${response.code()} ${response.message()}")
                     Log.e(TAG, "onFailure: ${response.errorBody()?.string()}")
@@ -67,7 +67,7 @@ class DashboardViewModel: ViewModel() {
                 _isLoading.value = false
                 val responseBody = response.body()
                 if(response.isSuccessful && responseBody != null) {
-                    _sellerInventory.value = response.body()?.data
+                    _sellerInventory.value = response.body()?.data?.result
                 }else{
                     Log.e(TAG, "onFailure: ${response.code()} ${response.message()}")
                     Log.e(TAG, "onFailure: ${response.errorBody()?.string()}")
@@ -116,7 +116,7 @@ class DashboardViewModel: ViewModel() {
                 _isLoading.value = false
                 val responseBody = response.body()
                 if (response.isSuccessful && responseBody != null){
-                    _sellerOrders.value = response.body()?.data
+                    _sellerOrders.value = response.body()?.data?.result
                 }else{
                     Log.e(TAG, "onFailure: ${response.code()} ${response.message()}")
                     Log.e(TAG, "onFailure: ${response.errorBody()?.string()}")

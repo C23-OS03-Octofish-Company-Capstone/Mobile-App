@@ -60,7 +60,15 @@ data class ProfileResponse(
 	val banyak: Long,
 
 	@field:SerializedName("data")
-	val data: List<ProfileItem>
+	val data: ProfileResponse2
+)
+
+data class ProfileResponse2(
+	@field:SerializedName("total")
+	val total: Any,
+
+	@field:SerializedName("result")
+	val result: List<ProfileItem>
 )
 
 data class ProfileItem(
@@ -87,7 +95,15 @@ data class InventoryResponse(
 	val banyak: Long,
 
 	@field:SerializedName("data")
-	val data: List<InventoryItem>
+	val data: InventoryResponse2
+)
+
+data class InventoryResponse2(
+	@field:SerializedName("total")
+	val total: Any,
+
+	@field:SerializedName("result")
+	val result: List<InventoryItem>
 )
 
 data class InventoryItem(
@@ -113,7 +129,15 @@ data class OrderResponse(
 	val banyak: Int,
 
 	@field:SerializedName("data")
-	val data: List<OrderItem>
+	val data: OrderResponse2
+)
+
+data class OrderResponse2(
+	@field:SerializedName("total")
+	val total: Any,
+
+	@field:SerializedName("result")
+	val result: List<OrderItem>
 )
 
 data class OrderItem(

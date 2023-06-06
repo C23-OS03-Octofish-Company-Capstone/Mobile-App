@@ -27,10 +27,11 @@ class TransactionAdapter(private val listOrderItem: List<OrderItem>) : RecyclerV
         return ListViewHolder(binding)
     }
 
-    override fun getItemCount(): Int = 8
+    override fun getItemCount(): Int = listOrderItem.size
 
     @SuppressLint("SetTextI18n")
     override fun onBindViewHolder(holder: ListViewHolder, position: Int) {
+
     }
 
 
