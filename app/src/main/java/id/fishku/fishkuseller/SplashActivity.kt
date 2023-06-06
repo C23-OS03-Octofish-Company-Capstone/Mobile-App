@@ -37,7 +37,7 @@ class SplashActivity : AppCompatActivity() {
         val login = Intent(this@SplashActivity, LoginActivity::class.java)
 
         loginViewModel.getSellerId().observe(this) {
-            isLogged = it != -1L
+            isLogged = it.toString().isNotEmpty()
             if(isLogged){
                 dashboard.putExtra(DashboardActivity.SELLER_ID, it)
             }

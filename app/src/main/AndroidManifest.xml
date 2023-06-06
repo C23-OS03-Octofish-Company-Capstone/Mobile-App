@@ -20,7 +20,7 @@
             android:name=".FreshnessActivity"
             android:exported="false" />
         <activity
-            android:name=".InfoOpsiActivity"
+            android:name=".OpsiInfoActivity"
             android:exported="false" />
         <activity
             android:name=".TransactionHistoryActivity"
