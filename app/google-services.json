@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "133050101901",
+    "firebase_url": "https://capstone-fishku-default-rtdb.firebaseio.com",
+    "project_id": "capstone-fishku",
+    "storage_bucket": "capstone-fishku.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:133050101901:android:7cf523885386df0da432c4",
+        "android_client_info": {
+          "package_name": "id.fishku.fishkuseller"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "133050101901-bv9e6b9t10bc10gspjac7143ql9orsv2.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCAIrv8MjuqvEDZPmIgKch0zSpdNE3ZF0A"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "133050101901-bv9e6b9t10bc10gspjac7143ql9orsv2.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
