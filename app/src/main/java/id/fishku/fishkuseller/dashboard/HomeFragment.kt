@@ -55,6 +55,10 @@ class HomeFragment : Fragment() {
             view.findNavController().navigate(R.id.action_homeFragment_to_notificationActivity)
         }
 
+        binding.btnInfostatis.setOnClickListener {
+            view.findNavController().navigate(R.id.action_navigation_home_to_opsiInfoActivity)
+        }
+
         binding.btnPredictionDetail.setOnClickListener {
             view.findNavController().navigate(R.id.action_navigation_home_to_priceActivity)
         }
