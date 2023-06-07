@@ -11,5 +11,8 @@ class FreshnessActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityFreshnessBinding.inflate(layoutInflater)
         setContentView(binding.root)
+
+        supportActionBar?.hide()
+
     }
 }

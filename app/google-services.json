@@ -1,34 +1,33 @@
 {
   "project_info": {
-    "project_number": "133050101901",
-    "firebase_url": "https://capstone-fishku-default-rtdb.firebaseio.com",
-    "project_id": "capstone-fishku",
-    "storage_bucket": "capstone-fishku.appspot.com"
+    "project_number": "57579461842",
+    "project_id": "capstone-project-ba56a",
+    "storage_bucket": "capstone-project-ba56a.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:133050101901:android:7cf523885386df0da432c4",
+        "mobilesdk_app_id": "1:57579461842:android:bdbd81b398d6ad2d3fa10b",
         "android_client_info": {
           "package_name": "id.fishku.fishkuseller"
         }
       },
       "oauth_client": [
         {
-          "client_id": "133050101901-bv9e6b9t10bc10gspjac7143ql9orsv2.apps.googleusercontent.com",
+          "client_id": "57579461842-drqcge47pruul5u38j9e6rspavg78u7a.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyCAIrv8MjuqvEDZPmIgKch0zSpdNE3ZF0A"
+          "current_key": "AIzaSyAaefrE8vgO_hO23D_5YuENEyN3br41Kq0"
         }
       ],
       "services": {
         "appinvite_service": {
           "other_platform_oauth_client": [
             {
-              "client_id": "133050101901-bv9e6b9t10bc10gspjac7143ql9orsv2.apps.googleusercontent.com",
+              "client_id": "57579461842-drqcge47pruul5u38j9e6rspavg78u7a.apps.googleusercontent.com",
               "client_type": 3
             }
           ]

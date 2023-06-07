@@ -22,6 +22,9 @@
         <action
             android:id="@+id/action_navigation_home_to_opsiInfoActivity"
             app:destination="@id/opsiInfoActivity" />
+        <action
+            android:id="@+id/action_navigation_home_to_freshnessDetectionActivity"
+            app:destination="@id/freshnessDetectionActivity" />
     </fragment>
     <activity
         android:id="@+id/navigation_notification"
@@ -58,5 +61,10 @@
         android:name="id.fishku.fishkuseller.OpsiInfoActivity"
         android:label="activity_opsi_info"
         tools:layout="@layout/activity_opsi_info" />
+    <activity
+        android:id="@+id/freshnessDetectionActivity"
+        android:name="id.fishku.fishkuseller.freshness.FreshnessDetectionActivity"
+        android:label="activity_freshness_detection"
+        tools:layout="@layout/activity_freshness_detection" />
 
 </navigation>

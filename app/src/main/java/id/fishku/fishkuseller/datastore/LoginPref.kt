@@ -36,7 +36,7 @@ class LoginPref private constructor(private val dataStore: DataStore<Preferences
 
     suspend fun removeSellerId(){
         dataStore.edit { preferences ->
-            preferences[SELLER_ID] = 0
+            preferences[SELLER_ID] = -1L
         }
     }
 

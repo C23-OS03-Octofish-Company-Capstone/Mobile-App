@@ -1,7 +1,10 @@
 package id.fishku.fishkuseller.api
 
+import okhttp3.MultipartBody
+import okhttp3.RequestBody
 import retrofit2.Call
 import retrofit2.http.*
+import java.io.File
 
 interface ApiService {
 
@@ -70,4 +73,16 @@ interface ApiService {
         @Path("sellerId") sellerId: Long,
         @Path("name") name: String,
     ): Call<InventoryResponse>
+
+    @Multipart
+    @POST("predict")
+    fun postFishEye(
+        @Part file: MultipartBody.Part
+    ): Call<DetectionResponse>
+
+    @Multipart
+    @POST("predict")
+    fun postFishGills(
+        @Part file: MultipartBody.Part
+    ): Call<DetectionResponse>
 }

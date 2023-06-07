@@ -156,3 +156,9 @@ data class OrderItem(
 	@field:SerializedName("photo_url")
 	val photoUrl: Any
 )
+
+data class DetectionResponse(
+
+	@field:SerializedName("Prediksi")
+	val prediction: String
+)

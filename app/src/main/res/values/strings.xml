@@ -81,8 +81,8 @@
     <string name="register_success_desc">Akun mu telah berhasil didaftarkan. Silahkan melakukan login.</string>
     <string name="regis_cancel">Batal Daftar</string>
     <string name="regis_cancel_desc">Apakah anda yakin ingin kembali? Input yang anda masukkan akan hilang.</string>
-    <string name="btn_yes">Yes</string>
-    <string name="btn_no">No</string>
+    <string name="btn_yes">Ya</string>
+    <string name="btn_no">Tidak</string>
     <string name="exit_app">Keluar Fishku</string>
     <string name="exit_validation">Anda akan keluar dari aplikasi. Lanjutkan?</string>
     <string name="next_price">Prediksi harga bulan depan</string>
@@ -129,6 +129,28 @@
     <string name="customer_support">Bantuan Pengguna</string>
     <string name="log_out">Keluar dari akun</string>
     <string name="edit_profile">Ubah Profil</string>
+    <string name="freshness_detector">Freshness Detector</string>
+    <string name="hello_world">Hello World</string>
+    <string name="take_photo">Ambil Foto</string>
+    <string name="camera_failed">Gagal memulai kamera</string>
+    <string name="capture_success">Foto berhasil.</string>
+    <string name="capture_failed">Foto gagal.</string>
+    <string name="memperoleh_hasil">Memperoleh hasil…</string>
+    <string name="cancel_and_retake">Ambil Ulang</string>
+    <string name="get_result">Cek Hasil</string>
+    <string name="exit">Keluar</string>
+    <string name="no_permit">Tidak mendapat izin</string>
+    <string name="discard_image">Buang Foto</string>
+    <string name="discard_desc">Kembali ke kamera? Foto yang sekarang akan dibuang.</string>
+    <string name="detect_result">Hasil Deteksi</string>
+    <string name="back_to_menu">Keluar</string>
+    <string name="back_to_menu_desc">Apakah anda yakin ingin kembali ke menu?</string>
+    <string name="batalkan">Batalkan</string>
+    <string name="chat_feature">Obrolan</string>
+    <string name="transaksi">Transaksi</string>
+    <string name="informasi">Informasi &amp; Ketentuan</string>
+    <string name="panduan_kesegaran">Panduan kesegaran ikan</string>
+    <string name="panduan_pengemasan_ikan">Panduan pengemasan ikan</string>
 
     <string-array name="spinner_items">
         <item>Pilih Peran</item>

@@ -5,21 +5,25 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
+import id.fishku.fishkuseller.databinding.ActivityOpsiInfoBinding
 
 class OpsiInfoActivity : AppCompatActivity() {
-    @SuppressLint("MissingInflatedId")
+
+    private lateinit var binding : ActivityOpsiInfoBinding
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_opsi_info)
+        binding = ActivityOpsiInfoBinding.inflate(layoutInflater)
+        setContentView(binding.root)
 
-        var btnfresh = findViewById<Button>(R.id.btnfresh)
-        btnfresh.setOnClickListener {
+        supportActionBar?.hide()
+
+        binding.btnfresh.setOnClickListener {
             val intent = Intent(this, FreshnessActivity::class.java)
             startActivity(intent)
         }
 
-        var btnpack = findViewById<Button>(R.id.btnpack)
-        btnpack.setOnClickListener {
+        binding.btnpack.setOnClickListener {
             val intent = Intent(this, PackingActivity::class.java)
             startActivity(intent)
         }
