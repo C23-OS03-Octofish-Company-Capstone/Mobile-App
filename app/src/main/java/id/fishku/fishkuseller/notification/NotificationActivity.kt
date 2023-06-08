@@ -17,6 +17,8 @@ class NotificationActivity : AppCompatActivity() {
         notifBinding = ActivityNotificationBinding.inflate(layoutInflater)
         setContentView(notifBinding.root)
 
+        supportActionBar?.title = "Notifikasi"
+
         notifBinding.apply {
             rvNotifOrder.layoutManager = LinearLayoutManager(this@NotificationActivity)
         }

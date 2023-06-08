@@ -1,15 +1,12 @@
 package id.fishku.fishkuseller.dashboard
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import id.fishku.fishkuseller.R
 import id.fishku.fishkuseller.dashboard.adapter.MethodTransactionHistory
 import id.fishku.fishkuseller.dashboard.adapter.TransactionHistoryAdapter
-import id.fishku.fishkuseller.databinding.ActivityNotificationBinding
 import id.fishku.fishkuseller.databinding.ActivityTransactionHistoryBinding
-import id.fishku.fishkuseller.notification.adapter.MethodNotif
-import id.fishku.fishkuseller.notification.adapter.NotificationOrderAdapter
 
 class TransactionHistoryActivity : AppCompatActivity() {
 
@@ -21,6 +18,8 @@ class TransactionHistoryActivity : AppCompatActivity() {
 
         historyBinding = ActivityTransactionHistoryBinding.inflate(layoutInflater)
         setContentView(historyBinding.root)
+
+        supportActionBar?.title = "Transaksi"
 
         val itemHistory: List<MethodTransactionHistory> = listOf(
             MethodTransactionHistory("Ikan Nila", "3 Kg", "Rp 25.000","30-05-2023", "Rp 75.000"),

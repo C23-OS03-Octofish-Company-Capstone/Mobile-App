@@ -5,13 +5,16 @@ import android.app.PendingIntent
 import android.content.BroadcastReceiver
 import android.content.Context
 import android.content.Intent
+import android.os.Build
+import androidx.annotation.RequiresApi
 import androidx.core.app.NotificationCompat
 import androidx.core.app.NotificationManagerCompat
 import id.fishku.fishkuseller.R
 import id.fishku.fishkuseller.dashboard.DashboardActivity
 
 class MyBroadcastReceiver : BroadcastReceiver() {
-    @SuppressLint("MissingPermission")
+    @RequiresApi(Build.VERSION_CODES.M)
+    @SuppressLint("MissingPermission", "UnsafeProtectedBroadcastReceiver")
     override fun onReceive(context: Context, intent: Intent) {
         val repeatingIntent = Intent(context, DashboardActivity::class.java)
         repeatingIntent.flags = Intent.FLAG_ACTIVITY_CLEAR_TOP

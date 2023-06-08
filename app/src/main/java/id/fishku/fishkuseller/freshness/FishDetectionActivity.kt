@@ -14,14 +14,12 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.view.ContextThemeWrapper
 import androidx.exifinterface.media.ExifInterface
 import id.fishku.fishkuseller.R
-import id.fishku.fishkuseller.api.DetectionResponse
 import id.fishku.fishkuseller.databinding.ActivityFishDetectionBinding
 import id.fishku.fishkuseller.reduceFileImage
 import id.fishku.fishkuseller.rotateFile
 import okhttp3.MediaType.Companion.toMediaType
 import okhttp3.MultipartBody
 import okhttp3.RequestBody.Companion.asRequestBody
-import retrofit2.Call
 import java.io.File
 import java.io.FileOutputStream
 
@@ -83,9 +81,6 @@ class FishDetectionActivity : AppCompatActivity() {
         binding.btnResult.setOnClickListener {
             if (fishPart.isNotEmpty()) {
                 uploadImage(fishPart)
-                Toast.makeText(this, fishPart, Toast.LENGTH_SHORT).show()
-            }else{
-                Toast.makeText(this, "Part is null", Toast.LENGTH_SHORT).show()
             }
 
         }
@@ -153,6 +148,10 @@ class FishDetectionActivity : AppCompatActivity() {
                 if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
                     binding.tvHasilDetect.setTextColor(getColor(R.color.orange))
                 }
+            }
+            else -> {
+                binding.btnResult.visibility = View.VISIBLE
+                Toast.makeText(this, "Deteksi Gagal", Toast.LENGTH_SHORT).show()
             }
         }
     }

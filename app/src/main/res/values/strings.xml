@@ -157,6 +157,8 @@
     <string name="rp_20_000_kg">Rp 20.000,-/kg</string>
     <string name="rp_23_000_kg">Rp 23.000,-/kg</string>
     <string name="prediksi_harga_ikan">Prediksi Harga Ikan</string>
+    <string name="_3">3</string>
+    <string name="rp_202_000">Rp. 202.000,-</string>
 
     <string-array name="spinner_items">
         <item>Pilih Peran</item>
