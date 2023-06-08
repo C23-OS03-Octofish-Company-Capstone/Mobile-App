@@ -8,7 +8,7 @@ import id.fishku.fishkuseller.api.OrderItem
 import id.fishku.fishkuseller.databinding.ListItemTransactionBinding
 import id.fishku.fishkuseller.notification.NewsNotification
 
-class TransactionAdapter(private val listOrderItem: List<OrderItem>) : RecyclerView.Adapter<TransactionAdapter.ListViewHolder>() {
+class TransactionAdapter(private val listOrderItem: List<MethodTransaction>) : RecyclerView.Adapter<TransactionAdapter.ListViewHolder>() {
 
     private lateinit var onItemClickCallback: OnItemClickCallback
 
@@ -27,11 +27,12 @@ class TransactionAdapter(private val listOrderItem: List<OrderItem>) : RecyclerV
         return ListViewHolder(binding)
     }
 
-    override fun getItemCount(): Int = listOrderItem.size
+    override fun getItemCount(): Int = 3
 
     @SuppressLint("SetTextI18n")
     override fun onBindViewHolder(holder: ListViewHolder, position: Int) {
-
+        holder.binding.textView25.text = listOrderItem[position].title
+        holder.binding.textView26.text = listOrderItem[position].price
     }
 
 

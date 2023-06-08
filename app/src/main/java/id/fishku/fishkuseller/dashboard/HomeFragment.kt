@@ -72,6 +72,10 @@ class HomeFragment : Fragment() {
             view.findNavController().navigate(R.id.action_navigation_home_to_freshnessDetectionActivity)
         }
 
+        binding.btnTransactionDetail.setOnClickListener {
+            view.findNavController().navigate(R.id.action_navigation_home_to_transactionHistoryActivity)
+        }
+
         val adapter = ArrayAdapter.createFromResource(requireContext(),
             R.array.filter_harga_ikan, R.layout.dropdown_item)
 

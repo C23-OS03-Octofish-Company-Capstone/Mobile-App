@@ -25,6 +25,9 @@
         <action
             android:id="@+id/action_navigation_home_to_freshnessDetectionActivity"
             app:destination="@id/freshnessDetectionActivity" />
+        <action
+            android:id="@+id/action_navigation_home_to_transactionHistoryActivity"
+            app:destination="@id/transactionHistoryActivity" />
     </fragment>
     <activity
         android:id="@+id/navigation_notification"
@@ -66,5 +69,10 @@
         android:name="id.fishku.fishkuseller.freshness.FreshnessDetectionActivity"
         android:label="activity_freshness_detection"
         tools:layout="@layout/activity_freshness_detection" />
+    <activity
+        android:id="@+id/transactionHistoryActivity"
+        android:name="id.fishku.fishkuseller.dashboard.TransactionHistoryActivity"
+        android:label="activity_transaction_history"
+        tools:layout="@layout/activity_transaction_history" />
 
 </navigation>

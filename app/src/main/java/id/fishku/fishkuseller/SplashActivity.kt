@@ -52,7 +52,7 @@ class SplashActivity : AppCompatActivity() {
         splashBinding.sellerapp.animate().setDuration(2000).alpha(1f)
         splashBinding.imageView.animate().setDuration(2000).alpha(1f).withEndAction {
             // Check if the user is logged in and start the appropriate activity
-            if(isLogged){
+            if(!isLogged){
                 startActivity(dashboard)
             }else {
                 startActivity(login)

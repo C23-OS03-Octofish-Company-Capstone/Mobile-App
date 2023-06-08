@@ -7,7 +7,11 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import androidx.recyclerview.widget.LinearLayoutManager
+import id.fishku.fishkuseller.R
 import id.fishku.fishkuseller.api.OrderItem
+import id.fishku.fishkuseller.dashboard.adapter.MessagingAdapter
+import id.fishku.fishkuseller.dashboard.adapter.MethodMessaging
+import id.fishku.fishkuseller.dashboard.adapter.MethodTransaction
 import id.fishku.fishkuseller.dashboard.adapter.TransactionAdapter
 import id.fishku.fishkuseller.databinding.FragmentTransactionBinding
 import kotlin.properties.Delegates
@@ -37,12 +41,21 @@ class TransactionFragment : Fragment() {
         dashboardViewModel.sellerOrder.observe(requireActivity()){
             setOrder(it)
         }
+
+        val itemTransaction: List<MethodTransaction> = listOf(
+            MethodTransaction("Ikan Nila", "Rp 25.000"),
+            MethodTransaction("Ikan Lele", "Rp 20.000"),
+            MethodTransaction("Ikan Bandeng", "Rp 27.000"),
+        )
+
+        binding.rvTransaction.layoutManager = LinearLayoutManager(requireContext())
+        binding.rvTransaction.adapter = TransactionAdapter(itemTransaction)
     }
 
     private fun setOrder(it: List<OrderItem>) {
         binding.apply {
             rvTransaction.layoutManager = LinearLayoutManager(requireActivity())
-            rvTransaction.adapter = TransactionAdapter(it)
+
         }
     }
 }
