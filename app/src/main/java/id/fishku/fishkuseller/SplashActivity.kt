@@ -4,6 +4,7 @@ import android.annotation.SuppressLint
 import android.content.Context
 import android.content.Intent
 import android.os.Bundle
+import android.util.Log
 import androidx.appcompat.app.AppCompatActivity
 import androidx.datastore.core.DataStore
 import androidx.datastore.preferences.core.Preferences
@@ -41,6 +42,7 @@ class SplashActivity : AppCompatActivity() {
             if(isLogged){
                 dashboard.putExtra(DashboardActivity.SELLER_ID, it)
             }
+            Log.d("SplashActivity", it.toString())
         }
 
 

@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/card_viewprice"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
@@ -12,47 +11,41 @@
     android:layout_marginBottom="4dp"
     app:cardCornerRadius="4dp">
 
-    <androidx.constraintlayout.widget.ConstraintLayout
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="40dp"
+        android:orientation="horizontal"
+
         android:padding="8dp">
 
 
         <TextView
-            android:id="@+id/textView10"
-            android:layout_width="wrap_content"
+            android:layout_weight="1"
+            android:id="@+id/tv_bulan"
+            style="@style/FishkuText"
+            android:textAlignment="center"
+            android:layout_width="fill_parent"
             android:layout_height="wrap_content"
-            android:text="Januari"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.047"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.225" />
+            android:text="@string/hello_world"/>
 
         <TextView
-            android:id="@+id/textView11"
-            android:layout_width="wrap_content"
+            android:layout_weight="1"
+            android:id="@+id/tv_harga_grosir"
+            style="@style/FishkuText"
+            android:layout_width="fill_parent"
+            android:textAlignment="center"
             android:layout_height="wrap_content"
-            android:text="Rp 20.000,-/kg"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.303"
-            app:layout_constraintStart_toEndOf="@+id/textView10"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.225" />
+            android:text="@string/rp_20_000_kg"/>
 
         <TextView
-            android:id="@+id/textView12"
-            android:layout_width="wrap_content"
+            android:layout_weight="1"
+            android:id="@+id/tv_harga_eceran"
+            style="@style/FishkuText"
+            android:layout_width="fill_parent"
             android:layout_height="wrap_content"
-            android:text="Rp 23.000,-/kg"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.783"
-            app:layout_constraintStart_toEndOf="@+id/textView11"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.225" />
-    </androidx.constraintlayout.widget.ConstraintLayout>
+            android:textAlignment="center"
+            android:text="@string/rp_23_000_kg"/>
+
+    </LinearLayout>
 
 </androidx.cardview.widget.CardView>

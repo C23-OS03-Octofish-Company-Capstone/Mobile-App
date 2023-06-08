@@ -1,7 +1,7 @@
-<resources>
+<resources xmlns:tools="http://schemas.android.com/tools">
     <string name="app_name">CapstoneFishkuSeller</string>
     <string name="dashboard">Dashboard</string>
-    <string name="toko_ikan">Toko Ikan</string>
+    <string name="toko_ikan">Memperoleh data…</string>
     <string name="notification_icon">Notification Icon</string>
     <string name="account_balance">Account Balance</string>
     <string name="rp_balance">Rp {Balance}</string>
@@ -116,7 +116,7 @@
     <string name="pengemasan_ikanhidup8">8. Pilih layanan pengiriman yang sesuai. Pilihlah pengiriman dengan penanganan khusus dan tercepat.</string>
     <string name="history_message">Pesanan telah diterima oleh yang bersangkutan</string>
     <string name="add_item">Tambah Barang</string>
-    <string name="tips">Foto berkualitas tinggi biasanya jadi lebih populer. Jenis foto yang diterima JPG, PNG.</string>
+    <string name="tips" tools:ignore="Typos">Foto berkualitas tinggi biasanya jadi lebih populer. Jenis foto yang diterima JPG, PNG.</string>
     <string name="edit_photo">Ubah Foto</string>
     <string name="item_name">Nama Ikan</string>
     <string name="item_price">Harga Ikan (Rp)</string>
@@ -151,6 +151,12 @@
     <string name="informasi">Informasi &amp; Ketentuan</string>
     <string name="panduan_kesegaran">Panduan kesegaran ikan</string>
     <string name="panduan_pengemasan_ikan">Panduan pengemasan ikan</string>
+    <string name="extras">Extras</string>
+    <string name="bulan">Bulan</string>
+    <string name="harga_bulan_ini">Harga Bulan Ini</string>
+    <string name="rp_20_000_kg">Rp 20.000,-/kg</string>
+    <string name="rp_23_000_kg">Rp 23.000,-/kg</string>
+    <string name="prediksi_harga_ikan">Prediksi Harga Ikan</string>
 
     <string-array name="spinner_items">
         <item>Pilih Peran</item>

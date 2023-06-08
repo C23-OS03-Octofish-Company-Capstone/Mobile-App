@@ -26,12 +26,22 @@
         android:layout_width="30dp"
         android:layout_height="30dp"
         android:layout_marginTop="30dp"
-        android:contentDescription="Information"
         android:src="@drawable/ic_info"
         app:layout_constraintEnd_toStartOf="@+id/btn_notification"
         app:layout_constraintHorizontal_bias="0.967"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="ContentDescription" />
+
+    <ImageView
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="8dp"
+        android:src="@drawable/logo"
+        app:layout_constraintBottom_toBottomOf="@+id/textView3"
+        app:layout_constraintStart_toStartOf="@+id/textView3"
+        app:layout_constraintTop_toTopOf="@+id/textView3"
+        tools:ignore="ContentDescription" />
 
     <ImageView
         android:id="@+id/btn_notification"
@@ -69,7 +79,7 @@
                 android:layout_marginTop="16dp"
                 android:contentDescription="@string/seller_photo"
                 android:scaleType="centerCrop"
-                android:src="@drawable/placeholder"
+                android:src="@drawable/avatar_placeholder"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
@@ -104,7 +114,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="16dp"
                 android:layout_marginEnd="16dp"
-                android:text="@string/income_exp"
+                android:text="@string/toko_ikan"
                 android:textColor="@color/profit"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/iv_seller_avatar" />
@@ -127,7 +137,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="16dp"
                 android:layout_marginEnd="16dp"
-                android:text="@string/sales_exp"
+                android:text="@string/toko_ikan"
                 android:textColor="@color/fishku_blue"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/lb_todays_income" />
@@ -270,7 +280,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="16dp"
                 android:layout_marginTop="8dp"
-                android:text="@string/exp_fish_price"
+                android:text="@string/toko_ikan"
                 android:textColor="@color/fishku_blue"
                 app:layout_constraintStart_toEndOf="@+id/lb_grosir"
                 app:layout_constraintTop_toBottomOf="@+id/lb_next_price" />
@@ -280,7 +290,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="16dp"
-                android:text="@string/exp_fish_price2"
+                android:text="@string/toko_ikan"
                 android:textColor="@color/fishku_blue"
                 app:layout_constraintStart_toEndOf="@+id/lb_grosir"
                 app:layout_constraintTop_toBottomOf="@+id/lb_grosir" />
@@ -306,6 +316,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="@string/see_price_prediction"
+                    style="@style/FishkuText"
                     android:textColor="@color/fishku_blue"
                     tools:layout_editor_absoluteX="126dp"
                     tools:layout_editor_absoluteY="418dp" />
@@ -315,12 +326,38 @@
     </androidx.cardview.widget.CardView>
 
 
-    <Button
-        android:id="@+id/btn_freshness_activity"
+    <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:layout_constraintBottom_toBottomOf="parent"
-        android:text="@string/freshness_detector"
-        app:layout_constraintTop_toBottomOf="@+id/cardViewAnalytic" />
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="8dp"
+        android:elevation="10dp"
+        app:cardCornerRadius="5dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cardViewAnalytic">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:elevation="2dp"
+            android:gravity="center">
+
+            <ImageView
+                android:id="@+id/btn_freshness_activity"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:clickable="true"
+                android:focusable="true"
+                android:foreground="?android:attr/selectableItemBackground"
+                android:scaleType="centerCrop"
+                android:src="@drawable/fishfreshnessscan"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:ignore="ContentDescription,UnusedAttribute" />
+
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

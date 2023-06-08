@@ -64,7 +64,7 @@ class UserFragment : Fragment() {
     }
 
     private fun setSellerData(it: List<ProfileItem>) {
-        binding.tvSellerEmail.text = "email@email.com"
+        binding.tvSellerEmail.text = it[0].email
         binding.tvSellerName.text = it[0].name
         val phoneNumberString = "+${it[0].phoneNumber}"
         binding.tvPhoneNumber.text = phoneNumberString

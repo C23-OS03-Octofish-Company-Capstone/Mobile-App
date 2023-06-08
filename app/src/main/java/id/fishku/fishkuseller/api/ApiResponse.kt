@@ -85,6 +85,9 @@ data class ProfileItem(
 	@field:SerializedName("location")
 	val location: String,
 
+	@field:SerializedName("email")
+	val email: String,
+
 	@field:SerializedName("photo_url")
 	val photoUrl: Any
 )
@@ -161,4 +164,10 @@ data class DetectionResponse(
 
 	@field:SerializedName("Prediksi")
 	val prediction: String
+)
+
+data class PriceResponse(
+	@field:SerializedName("predicted_price")
+	val predictedPrice: List<Double>
+
 )

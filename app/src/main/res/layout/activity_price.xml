@@ -10,68 +10,65 @@
         android:id="@+id/textView20"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/harga_ikan"
-        android:textColor="@color/blue"
+        android:layout_marginTop="25dp"
+        android:fontFamily="@font/poppins_semibold"
+        android:text="@string/prediksi_harga_ikan"
+        android:textAlignment="center"
+        android:textAllCaps="true"
+        android:textColor="@color/fishku_blue"
         android:textSize="24sp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.023" />
+        app:layout_constraintTop_toTopOf="parent"/>
 
     <androidx.cardview.widget.CardView
         android:id="@+id/card_viewpricetable"
         android:layout_width="match_parent"
         android:layout_height="40dp"
         android:layout_gravity="center"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginBottom="4dp"
         app:cardCornerRadius="4dp"
         app:layout_constraintBottom_toTopOf="@+id/rv_price"
-        app:layout_constraintTop_toBottomOf="@+id/textView9">
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/spn_priceikan">
 
-        <androidx.constraintlayout.widget.ConstraintLayout
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="40dp"
+            android:orientation="horizontal"
             android:padding="8dp">
 
 
             <TextView
-                android:id="@+id/textView14"
-                android:layout_width="wrap_content"
+                android:id="@+id/tv_bulan"
+                style="@style/FishkuText"
+                android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
-                android:text="Bulan"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.082"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.523" />
+                android:layout_weight="1"
+                android:text="@string/bulan"
+                android:textAlignment="center" />
 
             <TextView
-                android:id="@+id/textView17"
-                android:layout_width="wrap_content"
+                android:id="@+id/tv_harga_grosir"
+                style="@style/FishkuText"
+                android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
+                android:layout_weight="1"
                 android:text="@string/grosir"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.343"
-                app:layout_constraintStart_toEndOf="@+id/textView14"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.476" />
+                android:textAlignment="center" />
 
             <TextView
-                android:id="@+id/textView28"
-                android:layout_width="wrap_content"
+                android:id="@+id/tv_harga_eceran"
+                style="@style/FishkuText"
+                android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
+                android:layout_weight="1"
                 android:text="@string/eceran"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.7"
-                app:layout_constraintStart_toEndOf="@+id/textView17"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.523" />
-        </androidx.constraintlayout.widget.ConstraintLayout>
+                android:textAlignment="center" />
+
+        </LinearLayout>
 
     </androidx.cardview.widget.CardView>
 
@@ -79,7 +76,7 @@
         android:id="@+id/textView2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Jenis Ikan"
+        android:text="@string/jenis_ikan"
         android:textSize="16sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -88,18 +85,6 @@
         app:layout_constraintTop_toBottomOf="@+id/textView20"
         app:layout_constraintVertical_bias="0.072" />
 
-    <TextView
-        android:id="@+id/textView4"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Harga Bulan Ini"
-        android:textSize="16sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.141"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView2"
-        app:layout_constraintVertical_bias="0.055" />
 
     <Spinner
         android:id="@+id/spn_priceikan"
@@ -118,60 +103,6 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.14" />
 
-    <TextView
-        android:id="@+id/textView5"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/grosir"
-        android:textSize="16sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.176"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView4"
-        app:layout_constraintVertical_bias="0.039" />
-
-    <TextView
-        android:id="@+id/textView8"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/eceran"
-        android:textSize="16sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.179"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView5"
-        app:layout_constraintVertical_bias="0.043" />
-
-    <TextView
-        android:id="@+id/tv_grosir_now"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/exp_fish_price"
-        android:textColor="@color/fishku_blue"
-        android:textSize="16sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.402"
-        app:layout_constraintStart_toEndOf="@+id/textView5"
-        app:layout_constraintTop_toBottomOf="@+id/spn_priceikan"
-        app:layout_constraintVertical_bias="0.086" />
-
-    <TextView
-        android:id="@+id/tv_eceran_now"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/exp_fish_price2"
-        android:textColor="@color/fishku_blue"
-        android:textSize="16sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.612"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tv_grosir_now"
-        app:layout_constraintVertical_bias="0.041" />
-
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline2"
         android:layout_width="wrap_content"
@@ -179,23 +110,7 @@
         android:layout_marginEnd="411dp"
         android:orientation="horizontal"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintGuide_begin="280dp"
-        app:layout_constraintStart_toEndOf="@+id/tv_eceran_now" />
-
-    <TextView
-        android:id="@+id/textView9"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/price_prediction"
-        android:textColor="@color/blue"
-        android:textSize="24sp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/guideline2"
-        app:layout_constraintVertical_bias="0.052" />
+        app:layout_constraintGuide_begin="280dp" />
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rv_price"
@@ -207,6 +122,19 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/card_viewpricetable"
         tools:listitem="@layout/list_item_price" />
+
+    <ProgressBar
+        android:id="@+id/pb_loading"
+        style="?android:attr/progressBarStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:elevation="2dp"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/card_viewpricetable"
+        tools:visibility="visible" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

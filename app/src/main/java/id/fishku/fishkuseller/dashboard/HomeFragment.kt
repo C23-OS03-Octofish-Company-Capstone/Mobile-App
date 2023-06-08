@@ -1,5 +1,6 @@
 package id.fishku.fishkuseller.dashboard
 
+import android.annotation.SuppressLint
 import android.content.Intent
 import android.os.Bundle
 import android.util.Log
@@ -11,11 +12,16 @@ import android.widget.ArrayAdapter
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import androidx.navigation.findNavController
-import id.fishku.fishkuseller.FreshnessActivity
+import com.google.gson.Gson
 import id.fishku.fishkuseller.R
 import id.fishku.fishkuseller.api.ProfileItem
 import id.fishku.fishkuseller.databinding.FragmentHomeBinding
+import id.fishku.fishkuseller.formatPrice
 import id.fishku.fishkuseller.login.LoginActivity
+import id.fishku.fishkuseller.prediction.MyRequestObject
+import id.fishku.fishkuseller.prediction.PriceViewModel
+import okhttp3.MediaType.Companion.toMediaType
+import okhttp3.RequestBody.Companion.toRequestBody
 import kotlin.properties.Delegates
 
 class HomeFragment : Fragment() {
@@ -24,16 +30,11 @@ class HomeFragment : Fragment() {
     private val binding get() = _binding!!
 
     private lateinit var priceFilter : String
-    private lateinit var pBandeng: String
-    private lateinit var pGurame: String
-    private lateinit var pNila: String
-    private lateinit var pLele: String
-    private lateinit var pTongkol: String
-
 
 
     private var sellerId by Delegates.notNull<Long>()
     private val dashboardViewModel by viewModels<DashboardViewModel>()
+    private val priceViewModel by viewModels<PriceViewModel>()
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -43,6 +44,7 @@ class HomeFragment : Fragment() {
         return binding.root
     }
 
+    @SuppressLint("SetTextI18n")
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
@@ -54,7 +56,7 @@ class HomeFragment : Fragment() {
             setData(it)
         }
 
-
+        val gson = Gson()
 
         binding.btnNotification.setOnClickListener {
             view.findNavController().navigate(R.id.action_homeFragment_to_notificationActivity)
@@ -77,7 +79,14 @@ class HomeFragment : Fragment() {
 
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)
 
-
+        val requestEceranInit = gson.toJson(MyRequestObject("Gurame", "Eceran", 5))
+            .toRequestBody("application/json".toMediaType())
+        val requestGrosirInit = gson.toJson(MyRequestObject("Gurame","Grosir", 5))
+            .toRequestBody("application/json".toMediaType())
+        priceViewModel.getPriceEceran(requestEceranInit)
+        priceViewModel.getPriceGrosir(requestGrosirInit)
+        binding.tvNextPrice.text = "Memperoleh data..."
+        binding.tvNextPrice2.text = "Memperoleh data..."
 
         binding.spnFilterHarga.adapter = adapter
         binding.spnFilterHarga.onItemSelectedListener = object : AdapterView.OnItemSelectedListener {
@@ -87,18 +96,59 @@ class HomeFragment : Fragment() {
                 when(priceFilter) {
                     "Gurame" -> {
                         binding.ivPriceFishImage.setImageResource(R.drawable.ikan_gurame)
+                        val requestEceran = gson.toJson(MyRequestObject(priceFilter, "Eceran", 5))
+                            .toRequestBody("application/json".toMediaType())
+                        val requestGrosir = gson.toJson(MyRequestObject(priceFilter, "Grosir", 5))
+                            .toRequestBody("application/json".toMediaType())
+                        priceViewModel.getPriceEceran(requestEceran)
+                        priceViewModel.getPriceGrosir(requestGrosir)
+                        binding.tvNextPrice.text = "Memperoleh data..."
+                        binding.tvNextPrice2.text = "Memperoleh data..."
+
                     }
                     "Bandeng" -> {
                         binding.ivPriceFishImage.setImageResource(R.drawable.ikan_bandeng)
+                        val requestEceran = gson.toJson(MyRequestObject(priceFilter, "Eceran", 5))
+                            .toRequestBody("application/json".toMediaType())
+                        val requestGrosir = gson.toJson(MyRequestObject(priceFilter, "Grosir", 5))
+                            .toRequestBody("application/json".toMediaType())
+                        priceViewModel.getPriceEceran(requestEceran)
+                        priceViewModel.getPriceGrosir(requestGrosir)
+                        binding.tvNextPrice.text = "Memperoleh data..."
+                        binding.tvNextPrice2.text = "Memperoleh data..."
                     }
                     "Nila" -> {
                         binding.ivPriceFishImage.setImageResource(R.drawable.ikan_nila)
+                        val requestEceran = gson.toJson(MyRequestObject(priceFilter, "Eceran", 5))
+                            .toRequestBody("application/json".toMediaType())
+                        val requestGrosir = gson.toJson(MyRequestObject(priceFilter, "Grosir", 5))
+                            .toRequestBody("application/json".toMediaType())
+                        priceViewModel.getPriceEceran(requestEceran)
+                        priceViewModel.getPriceGrosir(requestGrosir)
+                        binding.tvNextPrice.text = "Memperoleh data..."
+                        binding.tvNextPrice2.text = "Memperoleh data..."
                     }
                     "Lele" -> {
                         binding.ivPriceFishImage.setImageResource(R.drawable.ikan_lele)
+                        val requestEceran = gson.toJson(MyRequestObject(priceFilter, "Eceran", 5))
+                            .toRequestBody("application/json".toMediaType())
+                        val requestGrosir = gson.toJson(MyRequestObject(priceFilter, "Grosir", 5))
+                            .toRequestBody("application/json".toMediaType())
+                        priceViewModel.getPriceEceran(requestEceran)
+                        priceViewModel.getPriceGrosir(requestGrosir)
+                        binding.tvNextPrice.text = "Memperoleh data..."
+                        binding.tvNextPrice2.text = "Memperoleh data..."
                     }
                     "Tongkol" -> {
                         binding.ivPriceFishImage.setImageResource(R.drawable.ikan_tongkol)
+                        val requestEceran = gson.toJson(MyRequestObject(priceFilter, "Eceran", 5))
+                            .toRequestBody("application/json".toMediaType())
+                        val requestGrosir = gson.toJson(MyRequestObject(priceFilter, "Grosir", 5))
+                            .toRequestBody("application/json".toMediaType())
+                        priceViewModel.getPriceEceran(requestEceran)
+                        priceViewModel.getPriceGrosir(requestGrosir)
+                        binding.tvNextPrice.text = "Memperoleh data..."
+                        binding.tvNextPrice2.text = "Memperoleh data..."
                     }
                 }
                 Log.d("RegisterActivity", "Item Selected : $priceFilter")
@@ -109,7 +159,18 @@ class HomeFragment : Fragment() {
             }
         }
 
+        priceViewModel.priceGrosir.observe(requireActivity()){
+            val price = formatPrice(it[0].toInt().toDouble())
+            binding.tvNextPrice.text = "Rp. $price/kg"
+        }
+        priceViewModel.priceEceran.observe(requireActivity()){
+            val price = formatPrice(it[0].toInt().toDouble())
+            binding.tvNextPrice2.text = "Rp. $price/kg"
+        }
+
+
     }
+
 
     private fun setData(it: List<ProfileItem>) {
         if(it[0].name.isNotEmpty()) {

@@ -57,7 +57,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="32dp"
                 android:layout_marginTop="8dp"
-                android:text="@string/account_name"
+                android:text="@string/toko_ikan"
                 android:textColor="@color/white"
                 android:textSize="16sp"
                 android:textStyle="bold"
@@ -71,7 +71,7 @@
                 android:layout_marginStart="32dp"
                 style="@style/FishkuText"
                 android:layout_marginTop="8dp"
-                android:text="@string/email"
+                android:text="@string/toko_ikan"
                 android:textColor="@color/white"
                 app:layout_constraintStart_toEndOf="@+id/iv_seller_avatar"
                 app:layout_constraintTop_toBottomOf="@+id/tv_seller_name" />
@@ -84,7 +84,7 @@
                 android:layout_marginStart="32dp"
                 android:layout_marginTop="8dp"
                 style="@style/FishkuText"
-                android:text="@string/phone"
+                android:text="@string/toko_ikan"
                 app:layout_constraintStart_toEndOf="@+id/iv_seller_avatar"
                 app:layout_constraintTop_toBottomOf="@+id/tv_seller_email" />
 

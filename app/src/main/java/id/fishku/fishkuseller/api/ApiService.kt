@@ -4,7 +4,6 @@ import okhttp3.MultipartBody
 import okhttp3.RequestBody
 import retrofit2.Call
 import retrofit2.http.*
-import java.io.File
 
 interface ApiService {
 
@@ -68,12 +67,6 @@ interface ApiService {
         @Path("idFish") idFish: Long,
     ): Call<RegisterResponse>
 
-    @GET("seller/ikan/{sellerId}/{name}")
-    fun searchInventory(
-        @Path("sellerId") sellerId: Long,
-        @Path("name") name: String,
-    ): Call<InventoryResponse>
-
     @Multipart
     @POST("predict")
     fun postFishEye(
@@ -85,4 +78,10 @@ interface ApiService {
     fun postFishGills(
         @Part file: MultipartBody.Part
     ): Call<DetectionResponse>
+
+    @Headers("Content-Type: application/json")
+    @POST("predict")
+    fun getPricePredict(
+        @Body requestJson: RequestBody
+    ): Call<PriceResponse>
 }
