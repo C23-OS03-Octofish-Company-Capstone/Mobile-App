@@ -6,7 +6,9 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
+import id.fishku.fishkuseller.R
 import id.fishku.fishkuseller.dashboard.adapter.MessagingAdapter
+import id.fishku.fishkuseller.dashboard.adapter.MethodMessaging
 import id.fishku.fishkuseller.databinding.FragmentMessagingBinding
 
 
@@ -27,7 +29,15 @@ class MessagingFragment : Fragment() {
 
         binding.apply {
             rvChat.layoutManager = LinearLayoutManager(requireActivity())
-            rvChat.adapter = MessagingAdapter()
         }
+
+        val itemMessaging: List<MethodMessaging> = listOf(
+            MethodMessaging(R.drawable.ava, "Ethan", "Hai, saya sudah pesan ikan bandeng", "20.20", "2"),
+            MethodMessaging(R.drawable.avadua, "Kinara P", "Oke terima kasih kak", "13.53", "4",),
+            MethodMessaging(R.drawable.ava, "Leo", "Tolong dikemas rapi, terima kasih!", "10.39", "3"),
+        )
+
+        binding.rvChat.layoutManager = LinearLayoutManager(requireContext())
+        binding.rvChat.adapter = MessagingAdapter(itemMessaging)
     }
 }

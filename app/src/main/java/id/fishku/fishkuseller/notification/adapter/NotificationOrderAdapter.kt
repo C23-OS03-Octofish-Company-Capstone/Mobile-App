@@ -7,7 +7,7 @@ import androidx.recyclerview.widget.RecyclerView
 import id.fishku.fishkuseller.databinding.NotificationOrderItemBinding
 import id.fishku.fishkuseller.notification.NewsNotification
 
-class NotificationOrderAdapter(/**private val listNewsNotification: List<ArticlesItem>*/) : RecyclerView.Adapter<NotificationOrderAdapter.ListViewHolder>() {
+class NotificationOrderAdapter(private val listNewsNotification: List<MethodNotif>) : RecyclerView.Adapter<NotificationOrderAdapter.ListViewHolder>() {
 
     private lateinit var onItemClickCallback: OnItemClickCallback
 
@@ -26,11 +26,14 @@ class NotificationOrderAdapter(/**private val listNewsNotification: List<Article
         return ListViewHolder(binding)
     }
 
-    override fun getItemCount(): Int = 8
+    override fun getItemCount(): Int = 5
 
     @SuppressLint("SetTextI18n")
     override fun onBindViewHolder(holder: ListViewHolder, position: Int) {
-      holder.binding.tvOrderTitle.text = "Order"
+        //holder.binding.tvOrderTitle.text = "Order"
+        holder.binding.ivImg.setImageResource(listNewsNotification[position].imageNotif)
+        holder.binding.tvOrderTitle.text = listNewsNotification[position].title
+        holder.binding.tvOrderTotal.text = listNewsNotification[position].desc
     }
 
 

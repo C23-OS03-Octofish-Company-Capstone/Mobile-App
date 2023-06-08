@@ -7,7 +7,7 @@ import androidx.recyclerview.widget.RecyclerView
 import id.fishku.fishkuseller.databinding.ListItemMessageBinding
 import id.fishku.fishkuseller.notification.NewsNotification
 
-class MessagingAdapter(/**private val listNewsNotification: List<ArticlesItem>*/) : RecyclerView.Adapter<MessagingAdapter.ListViewHolder>() {
+class MessagingAdapter(private val listNewsNotification: List<MethodMessaging>) : RecyclerView.Adapter<MessagingAdapter.ListViewHolder>() {
 
     private lateinit var onItemClickCallback: OnItemClickCallback
 
@@ -26,11 +26,15 @@ class MessagingAdapter(/**private val listNewsNotification: List<ArticlesItem>*/
         return ListViewHolder(binding)
     }
 
-    override fun getItemCount(): Int = 8
+    override fun getItemCount(): Int = 3
 
     @SuppressLint("SetTextI18n")
     override fun onBindViewHolder(holder: ListViewHolder, position: Int) {
+        holder.binding.imageView.setImageResource(listNewsNotification[position].image)
+        holder.binding.textView18.text = listNewsNotification[position].name
+        holder.binding.textView19.text = listNewsNotification[position].massage
+        holder.binding.tvTime.text = listNewsNotification[position].time
+        holder.binding.textView21.text = listNewsNotification[position].count
     }
-
 
 }
