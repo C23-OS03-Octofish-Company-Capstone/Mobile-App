@@ -7,13 +7,13 @@ This mobile application is designed to facilitate the sale of fish by providing 
 
 ## Features
 
-- **Login and Sign Up:** 
-- **Dashboard:** 
-- **Fish Price Prediction:** 
-- **Gill and Eye Freshness Detection:** 
-- **Fish Inventory Management:** 
-- **Notification:**
-- **Fish Market News:** 
+- **Login and Sign Up** 
+- **Dashboard** 
+- **Fish Price Prediction** 
+- **Gill and Eye Freshness Detection** 
+- **Fish Inventory Management** 
+- **Notification**
+- **Fish Market News** 
 
 ---
 
