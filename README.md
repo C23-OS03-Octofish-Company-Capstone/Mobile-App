@@ -1,4 +1,4 @@
-# Capstone Fishku Seller
+# Capstone Fishku Seller App
 Project Android Mobile Application for Company Capstone Project Bangkit 2023.
 
 This mobile application is designed to facilitate the sale of fish by providing various features to users. It is developed using Kotlin programming language and leverages several Google Cloud Platform services for data storage and deployment.
@@ -29,7 +29,7 @@ This mobile application is designed to facilitate the sale of fish by providing 
 
 To get started with the Fish Market App, follow these steps:
 
-1. Clone the repository: `https://github.com/C23-OS03-Octofish-Company-Capstone/Mobile-App.git`
+1. Clone the repository:  { https://github.com/C23-OS03-Octofish-Company-Capstone/Mobile-App.git }
    or you can use Android Studio
    File > New > Project from Version Control ...
 2. Open the Project in your Android Studio
