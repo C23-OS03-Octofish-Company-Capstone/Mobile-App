@@ -29,29 +29,22 @@ This mobile application is designed to facilitate the sale of fish by providing 
 
 To get started with the Fish Market App, follow these steps:
 
-1. Clone the repository:  { https://github.com/C23-OS03-Octofish-Company-Capstone/Mobile-App.git }
+1. Clone the repository:  ```json https://github.com/C23-OS03-Octofish-Company-Capstone/Mobile-App.git ```
    or you can use Android Studio
    File > New > Project from Version Control ...
 2. Open the Project in your Android Studio
    Open Android Studio and select open an existing project.
 3. Run Project in Android Studio
    Wait for Gradle Build to Finish and finally press the Run > Run ‘app’. Now the app has been installed in your phone / emulator. Make sure that you have configured your android device or emulator
+   
+---
 
+## Requirement
 
-## Contribution
-
-We welcome contributions from the GitHub community to enhance the Fish Market App. If you would like to contribute, please follow these steps:
-
-1. Fork this repository.
-2. Create a new branch for the feature or fix you will be working on.
-3. Make the necessary changes.
-4. Submit a pull request to the main branch of this repository.
-
-## License
-
-The Fish Market App is licensed under the [MIT License](LICENSE), which means you are free to use and modify the code as per your requirements.
+1. Android Studio
+2. Android Device or Android Emulator
 
 ---
 
-Thank you for your interest in the Fish Market App! We hope this application helps streamline fish sales and provides a positive experience for both sellers and customers. If you have any questions or suggestions, please don't hesitate to contact us.
+Thank you for visiting the Octofish repository! We hope this application helps expand your fish sales business and enhances customer experience. If you have any suggestions or questions, please don't hesitate to contact us.
 
