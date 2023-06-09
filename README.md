@@ -41,7 +41,7 @@ To get started with the Fish Market App, follow these steps:
 
 ## Requirement
 
-1. Android Studio
+1. Android Studio Electric Eel // 2022.1.1
 2. Android Device or Android Emulator
 
 ---
