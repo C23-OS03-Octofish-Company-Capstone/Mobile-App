@@ -31,7 +31,7 @@ To get started with the Fish Market App, follow these steps:
 
 1. Clone the repository:  
 ```json 
-https://github.com/C23-OS03-Octofish-Company-Capstone/Mobile-App.git 
+'https://github.com/C23-OS03-Octofish-Company-Capstone/Mobile-App.git' 
 ```
    or you can use Android Studio
    File > New > Project from Version Control ...
